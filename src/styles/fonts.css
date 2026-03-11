@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* SF Pro Display alternatives using system fonts */
+@font-face {
+  font-family: 'SF_Pro_Display:Regular';
+  src: local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SF_Pro_Display:Medium';
+  src: local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SF_Pro_Display:Bold';
+  src: local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'SF_Pro_Display:Heavy';
+  src: local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'SF_Pro_Display:Thin';
+  src: local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI');
+  font-weight: 100;
+}
+
+/* Helvetica Neue alternatives */
+@font-face {
+  font-family: 'Helvetica_Neue:Bold';
+  src: local('Helvetica Neue'), local('Helvetica'), local('Arial');
+  font-weight: 700;
+}
+
+/* Corsiva Hebrew alternative using cursive */
+@font-face {
+  font-family: 'Corsiva_Hebrew:Regular';
+  src: local('Brush Script MT'), local('Lucida Handwriting'), local('cursive');
+  font-style: italic;
+}
+
+/* SeoulNamsan alternative using Noto Sans Hebrew */
+@font-face {
+  font-family: 'SeoulNamsan_CM:Regular';
+  src: local('Noto Sans Hebrew'), local('Arial Hebrew'), local('Arial');
+  font-weight: 400;
+}

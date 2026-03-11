@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script type="text/javascript">
+    // GitHub Pages has no fallback routing; redirect to base so the SPA loads
+    (function () {
+      var base = '/yanivmeirbohbot/';
+      var path = location.pathname;
+      if (path !== base && path.indexOf(base) === 0) {
+        // Preserve path as hash for client-side routers that support it
+        var subPath = path.slice(base.length);
+        location.replace(base + (subPath ? '#' + subPath : ''));
+      } else {
+        location.replace(base);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>

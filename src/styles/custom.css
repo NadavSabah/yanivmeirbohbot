@@ -1,0 +1,105 @@
+/* Custom styles for Hebrew landing page */
+
+/* RTL support */
+[dir="auto"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Smooth transitions for buttons */
+button,
+[data-name*="Button"] {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+[data-name*="Button"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 105, 50, 0.3);
+}
+
+[data-name*="Button"]:active {
+  transform: translateY(0);
+}
+
+/* Better scrolling on mobile */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar but keep functionality */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Improve image loading */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Better text rendering for Hebrew */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fix for absolute positioned content */
+[data-name="Yaniv"] {
+  position: relative;
+  min-height: 2700px;
+}
+
+/* WhatsApp button hover effect */
+[data-name="Small - SocialWhatsappCircle"] {
+  transition: transform 0.2s ease;
+}
+
+[data-name="_elements / Button"]:hover [data-name="Small - SocialWhatsappCircle"] {
+  transform: scale(1.1);
+}
+
+/* Email link hover */
+a[href^="mailto"] {
+  text-decoration: none;
+}
+
+/* Fade in animation for content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Loading state */
+.loading {
+  opacity: 0;
+}
+
+.loaded {
+  animation: fadeIn 0.5s ease-out forwards;
+}
