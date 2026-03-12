@@ -63,7 +63,7 @@ export const StickyHeaderCTA: React.FC<StickyHeaderCTAProps> = ({ onClick }) => 
       aria-hidden={!isVisible}
     >
       <div className="bg-black/30 backdrop-blur-md">
-        <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-center md:justify-between gap-3">
+        <div className="mx-auto max-w-5xl px-4 py-6 flex items-center justify-center md:justify-between gap-3">
           <p className="hidden md:block text-sm text-white/80">
             {texts.cta.stickyHeaderLabel}
           </p>
