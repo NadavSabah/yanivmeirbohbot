@@ -16,6 +16,7 @@ export function OrangeCTAButton({ className = "", onClick }: CTAButtonProps) {
 
   return (
     <button
+      id="hero-cta"
       onClick={handleClick}
       className={`-translate-x-1/2 absolute bg-[#f56932] content-stretch flex h-[44px] items-center justify-center left-1/2 px-[16px] py-[4px] rounded-[4px] hover:bg-[#e55822] transition-all ${className}`}
       data-name="_elements / Button"
@@ -41,6 +42,7 @@ export function WhatsAppButton({ className = "", onClick }: CTAButtonProps) {
   return (
     <button
       onClick={handleClick}
+      id="footer-cta"
       className={`bg-white h-[44px] relative rounded-[4px] shrink-0 w-full hover:bg-gray-50 transition-all ${className}`}
       data-name="_elements / Button"
     >
