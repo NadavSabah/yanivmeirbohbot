@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { texts } from "../../constants/texts";
 
 type StickyHeaderCTAProps = {
   onClick?: () => void;
@@ -63,7 +64,7 @@ export const StickyHeaderCTA: React.FC<StickyHeaderCTAProps> = ({ onClick }) => 
       <div className="bg-black/30 backdrop-blur-md">
         <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-center md:justify-between gap-3">
           <p className="hidden md:block text-sm text-white/80">
-            Ready to take the next step?
+            {texts.cta.stickyHeaderLabel}
           </p>
           <button
             type="button"
@@ -71,7 +72,7 @@ export const StickyHeaderCTA: React.FC<StickyHeaderCTAProps> = ({ onClick }) => 
             className="content-stretch flex h-[44px] items-center justify-center px-[16px] py-[4px] rounded-[4px] bg-[#f56932] hover:bg-[#e55822] transition-all"
           >
             <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-center text-white tracking-[0.9px] uppercase whitespace-nowrap" dir="auto">
-              שריינו מקום בהרצאה הקרובה
+              {texts.cta.heroPrimary}
             </p>
           </button>
         </div>

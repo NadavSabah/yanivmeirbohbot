@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { texts } from "../../constants/texts";
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +39,7 @@ export function ScrollToTop() {
         <button
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 z-50 bg-[#f56932] text-white p-3 rounded-full shadow-lg hover:bg-[#e55822] transition-all duration-300 hover:scale-110"
-          aria-label="גלול למעלה"
+          aria-label={texts.accessibility.scrollToTopAria}
         >
           <svg
             className="w-6 h-6"

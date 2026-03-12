@@ -1,3 +1,6 @@
+import React from "react";
+import { texts } from "../../constants/texts";
+
 interface CTAButtonProps {
   className?: string;
   onClick?: () => void;
@@ -9,7 +12,7 @@ export function OrangeCTAButton({ className = "", onClick }: CTAButtonProps) {
       onClick();
     } else {
       // Default WhatsApp action
-      const message = encodeURIComponent("שלום, אני מעוניין/ת לשמוע פרטים נוספים על ההרצאה");
+      const message = encodeURIComponent(texts.cta.heroWhatsAppMessage);
       window.open(`https://wa.me/?text=${message}`, '_blank');
     }
   };
@@ -22,7 +25,7 @@ export function OrangeCTAButton({ className = "", onClick }: CTAButtonProps) {
       data-name="_elements / Button"
     >
       <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-center text-white tracking-[0.9px] uppercase whitespace-nowrap" dir="auto">
-        שריינו מקום בהרצאה הקרובה
+        {texts.cta.heroPrimary}
       </p>
     </button>
   );
@@ -34,7 +37,7 @@ export function WhatsAppButton({ className = "", onClick }: CTAButtonProps) {
       onClick();
     } else {
       // Default WhatsApp action
-      const message = encodeURIComponent("שלום, אני מעוניין/ת להזמין הרצאה לארגון");
+      const message = encodeURIComponent(texts.cta.footerWhatsAppMessage);
       window.open(`https://wa.me/?text=${message}`, '_blank');
     }
   };
@@ -62,7 +65,7 @@ export function WhatsAppButton({ className = "", onClick }: CTAButtonProps) {
               </div>
             </div>
             <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#333] text-[15px] text-center tracking-[0.9px] uppercase whitespace-nowrap" dir="auto">
-              שריינו מקום בהרצאה הקרובה
+              {texts.cta.heroPrimary}
             </p>
           </div>
         </div>
