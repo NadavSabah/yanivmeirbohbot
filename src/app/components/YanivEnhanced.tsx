@@ -22,9 +22,6 @@ function MaskGroup() {
 function Frame1() {
   return (
     <div className="absolute content-stretch flex gap-[12px] items-start justify-end left-[32px] top-[1194px]">
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">{texts.content.maxResultMinFrictionTitle}</span>
-      </p>
       <div className="relative shrink-0 size-[20px]" data-name="Small - Birth">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[20px] top-1/2" data-name="Normal - Birth">
           <div className="absolute inset-[16.67%_21.64%_16.67%_19.56%]" data-name="Icon">
@@ -34,6 +31,9 @@ function Frame1() {
           </div>
         </div>
       </div>
+      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
+        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">{texts.content.maxResultMinFrictionTitle}</span>
+      </p>
     </div>
   );
 }
@@ -41,11 +41,6 @@ function Frame1() {
 function Frame2() {
   return (
     <div className="absolute content-stretch flex gap-[12px] items-start justify-end left-[32px] top-[1278px]">
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-        </span>
-        <span className="leading-[24px]">{texts.content.maxResultMinFrictionBody}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionBodyEmphasis}</span></span>
-      </p>
       <div className="relative shrink-0 size-[20px]" data-name="Small - Birth">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[20px] top-1/2" data-name="Normal - Birth">
           <div className="absolute inset-[16.67%_21.64%_16.67%_19.56%]" data-name="Icon">
@@ -55,6 +50,11 @@ function Frame2() {
           </div>
         </div>
       </div>
+      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
+        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
+        </span>
+        <span className="leading-[24px]">{texts.content.maxResultMinFrictionBody}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionBodyEmphasis}</span></span>
+      </p>
     </div>
   );
 }
