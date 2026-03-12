@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { texts } from "../../constants/texts";
+import { openWhatsApp } from "./CTAButtons";
 
 type StickyHeaderCTAProps = {
   onClick?: () => void;
@@ -68,7 +69,7 @@ export const StickyHeaderCTA: React.FC<StickyHeaderCTAProps> = ({ onClick }) => 
           </p>
           <button
             type="button"
-            onClick={onClick}
+            onClick={onClick ?? (() => openWhatsApp(texts.cta.heroWhatsAppMessage))}
             className="content-stretch flex h-[44px] items-center justify-center px-[16px] py-[4px] rounded-[4px] bg-[#f56932] hover:bg-[#e55822] transition-all"
           >
             <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-center text-white tracking-[0.9px] uppercase whitespace-nowrap" dir="auto">

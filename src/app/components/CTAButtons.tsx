@@ -1,6 +1,14 @@
 import React from "react";
 import { texts } from "../../constants/texts";
 
+const WHATSAPP_NUMBER = "972508803015";
+
+/** Open WhatsApp with optional prefilled message. Use for sticky header / any CTA that shares the same number. */
+export function openWhatsApp(message?: string) {
+  const text = message != null ? message : texts.cta.heroWhatsAppMessage;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
+}
+
 interface CTAButtonProps {
   className?: string;
   onClick?: () => void;
@@ -11,9 +19,7 @@ export function OrangeCTAButton({ className = "", onClick }: CTAButtonProps) {
     if (onClick) {
       onClick();
     } else {
-      // Default WhatsApp action
-      const message = encodeURIComponent(texts.cta.heroWhatsAppMessage);
-      window.open(`https://wa.me/?text=${message}`, '_blank');
+      openWhatsApp(texts.cta.heroWhatsAppMessage);
     }
   };
 
@@ -36,9 +42,7 @@ export function WhatsAppButton({ className = "", onClick }: CTAButtonProps) {
     if (onClick) {
       onClick();
     } else {
-      // Default WhatsApp action
-      const message = encodeURIComponent(texts.cta.footerWhatsAppMessage);
-      window.open(`https://wa.me/?text=${message}`, '_blank');
+      openWhatsApp(texts.cta.footerWhatsAppMessage);
     }
   };
 

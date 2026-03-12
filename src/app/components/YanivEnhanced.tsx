@@ -97,7 +97,7 @@ function Frame4() {
 function MaskGroup1() {
   return (
     <div className="absolute contents left-0 top-[2622px]" data-name="Mask group">
-      <div className="absolute h-[851.015px] left-0 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_771.444px] mask-size-[393px_79.57px] top-[1850.56px] w-[393px]" data-name="image 768" style={{ maskImage: `url('${imgImage768}')` }}>
+      <div className="absolute h-[851.015px] left-0 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_771.444px] mask-size-[393px_79.57px] top-[1850.56px] w-[393px] pointer-events-none" data-name="image 768" style={{ maskImage: `url('${imgImage768}')` }}>
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage770} />
       </div>
     </div>
