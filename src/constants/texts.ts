@@ -11,7 +11,7 @@ export const texts = {
     transitionFromIntuitionToMethodBody: " להפסיק לנחש ולהתחיל להשתמש בכלים פסיכולוגיים ומנטליים מוכחים.",
     maxResultMinFrictionTitle: "איך לזהות את הרצון האמיתי שמסתתר מאחורי ההתנהגות,",
     maxResultMinFrictionTitleEmphasis: "הרצון האמיתי שמסתתר מאחורי ההתנהגות",
-    maxResultMinFrictionBody: "ואיך להפוך רגע של התנגדות דווקא להזדמנות וליצור ",
+    maxResultMinFrictionBody: "איך להפוך רגע של התנגדות דווקא להזדמנות וליצור ",
     maxResultMinFrictionBodyEmphasis: "השפעה עמוקה לאורך זמן.",
     inviteLectureTitle: "רוצה להזמין הרצאה לארגון שלך?",
     inviteLectureBody:
