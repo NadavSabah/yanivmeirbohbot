@@ -1,23 +1,11 @@
 import svgPaths from "../../imports/svg-16itobd6e1";
 import { imgImage769, imgImage768 } from "../../imports/svg-sgxb4";
-// Placeholder for local run (figma:asset only works in Figma)
-const imgImage770 =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
-const imgPhoto202603060936201 =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
-import { LiveClock } from "./LiveClock";
+import heroImage from "../../assets/heroImage.jpeg";
+
+// Use the hero image wherever the old figma placeholder (imgImage770) was used
+const imgImage770 = heroImage;
 import { OrangeCTAButton, WhatsAppButton } from "./CTAButtons";
 import { texts } from "../../constants/texts";
-
-function MaskGroup() {
-  return (
-    <div className="absolute contents left-0 top-0" data-name="Mask group">
-      <div className="absolute h-[851.015px] left-0 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-[393px_98.007px] top-0 w-[393px]" data-name="image 769" style={{ maskImage: `url('${imgImage769}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage770} />
-      </div>
-    </div>
-  );
-}
 
 function Frame1() {
   return (
@@ -94,88 +82,82 @@ function Frame4() {
   );
 }
 
-function MaskGroup1() {
-  return (
-    <div className="absolute contents left-0 top-[2622px]" data-name="Mask group">
-      <div className="absolute h-[851.015px] left-0 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_771.444px] mask-size-[393px_79.57px] top-[1850.56px] w-[393px] pointer-events-none" data-name="image 768" style={{ maskImage: `url('${imgImage768}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage770} />
-      </div>
-    </div>
-  );
-}
-
 export default function YanivEnhanced() {
   return (
     <div className="bg-white relative size-full" data-name="Yaniv">
-      <MaskGroup />
-      <LiveClock />
-      <div className="absolute h-[444px] left-0 top-[98px] w-[393px]" data-name="PHOTO-2026-03-06-09-36-20 1">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Hero at top: relative container, image first in DOM, content overlays via absolute */}
+      <div className="relative w-[393px] h-[500px]">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none" data-name="PHOTO-2026-03-06-09-36-20 1">
           <img
             alt={texts.accessibility.heroImageAlt}
-            className="absolute h-[123.5%] left-[0.02%] max-w-none top-[-23.52%] w-[99.94%]"
-            src={imgPhoto202603060936201}
+            className="absolute h-[100.5%] left-[0.02%] max-w-none top-[0%] w-[99.94%] object-cover"
+            src={heroImage}
           />
         </div>
+        <div className="hero-content absolute left-0 top-[190px] w-[393px] h-[285px]">
+          <div className="-translate-x-full absolute left-[361px] top-0 w-[329px] text-right text-white">
+            <p className="font-['SF_Pro_Display:Heavy',sans-serif] leading-[32px] text-[32px] tracking-[0.3px] mb-0 text-[#fab997]" dir="auto">
+              {texts.content.heroHeadline}
+            </p>
+            <p className="font-['SF_Pro_Display:Thin',sans-serif] leading-[32px] text-[32px]" dir="auto">
+              {texts.content.heroSubheadline}
+            </p>
+            <p className="mt-2 font-['SF_Pro_Display:Medium',sans-serif] leading-[24px] text-[16px] tracking-[0.3px]" dir="auto">
+              {texts.content.heroDescription}
+            </p>
+          </div>
+          <OrangeCTAButton className="top-[237px]" />
+        </div>
       </div>
-      <OrangeCTAButton className="top-[467px]" />
-      <div className="-translate-x-full absolute left-[361px] top-[230px] w-[329px] text-right text-white">
-        <p className="font-['SF_Pro_Display:Heavy',sans-serif] leading-[32px] text-[32px] tracking-[0.3px] mb-0 text-[#fab997]" dir="auto">
-          {texts.content.heroHeadline}
+      {/* Distance + intro block: flow layout, same visual position via margin */}
+      <div className="mt-[30px] flex flex-col gap-[45px] items-end w-full max-w-[393px] box-border px-[32px]">
+        <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[28px] not-italic text-[#333] text-[20px] text-right tracking-[0.3px] w-[323px]" dir="auto">
+          {texts.content.distanceTitle}
         </p>
-        <p className="font-['SF_Pro_Display:Thin',sans-serif] leading-[32px] text-[32px]" dir="auto">
-          {texts.content.heroSubheadline}
-        </p>
-        <p className="mt-2 font-['SF_Pro_Display:Medium',sans-serif] leading-[24px] text-[16px] tracking-[0.3px]" dir="auto">
-          {texts.content.heroDescription}
-        </p>
-      </div>
-      <p className="-translate-x-full absolute font-['SF_Pro_Display:Bold',sans-serif] leading-[28px] left-[361px] not-italic text-[#333] text-[20px] text-right top-[571px] tracking-[0.3px] w-[323px]" dir="auto">
-        {texts.content.distanceTitle}
-      </p>
-      <div className="-translate-x-full absolute font-['SeoulNamsan_CM:Regular',sans-serif] leading-[0] left-[360px] not-italic text-[16px] text-black text-right top-[644px] tracking-[0.3px] w-[328px] whitespace-pre-wrap">
-        <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.distanceIntro}
-          </span>
-          <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.distanceExample}
-            <br aria-hidden="true" />
-            <br aria-hidden="true" />
-          </span>
-        </p>
-        <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.introNiceToMeet}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-            {texts.content.introName}
-          </span>
-          <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.introBioLine1}
+        <div className="font-['SeoulNamsan_CM:Regular',sans-serif] leading-[0] not-italic text-[16px] text-black text-right tracking-[0.3px] w-[328px] whitespace-pre-wrap">
+          <p className="mb-0" dir="auto">
+            <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
+              {texts.content.distanceIntro}
+            </span>
+            <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
+              {texts.content.distanceExample}
+              <br aria-hidden="true" />
+              <br aria-hidden="true" />
+            </span>
+          </p>
+          <p className="mb-0" dir="auto">
+            <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
+              {texts.content.introNiceToMeet}
+            </span>
+            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
+              {texts.content.introName}
+            </span>
+            <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
+              {texts.content.introBioLine1}
+              <br />
+              {texts.content.introBioLine2}
+              <br />
+              {texts.content.introBioLine3}
+            </span>
+          </p>
+          <p className="leading-[24px] mb-0" dir="auto">
+            &nbsp;
+          </p>
+          <p className="mb-0" dir="auto">
+            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
+              {texts.content.afterYearsTitle}
+            </span>
             <br />
-            {texts.content.introBioLine2}
-            <br />
-            {texts.content.introBioLine3}
-          </span>
-        </p>
-        <p className="leading-[24px] mb-0" dir="auto">
-          &nbsp;
-        </p>
-        <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-            {texts.content.afterYearsTitle}
-          </span>
-          <br />
-          <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.afterYearsBody}
-            <br aria-hidden="true" />
-            <br aria-hidden="true" />
-          </span>
-        </p>
-        <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]" dir="auto">
-          {texts.content.whatMakesProfessionalQuestion}
-        </p>
+            <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
+              {texts.content.afterYearsBody}
+              <br aria-hidden="true" />
+              <br aria-hidden="true" />
+            </span>
+          </p>
+          <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]" dir="auto">
+            {texts.content.whatMakesProfessionalQuestion}
+          </p>
+        </div>
       </div>
       <Frame1 />
       <Frame2 />
@@ -270,7 +252,7 @@ export default function YanivEnhanced() {
       </p>
       <Frame5 />
       <Frame4 />
-      <MaskGroup1 />
+      {/* <MaskGroup1 /> */}
     </div>
   );
 }
