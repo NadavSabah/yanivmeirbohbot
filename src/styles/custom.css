@@ -30,6 +30,19 @@ button,
   transform: translateY(0);
 }
 
+/* Prevent horizontal scroll and consistent box model */
+html,
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 /* Better scrolling on mobile */
 html {
   scroll-behavior: smooth;
