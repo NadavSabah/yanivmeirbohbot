@@ -237,7 +237,12 @@ export default function Yaniv() {
           </span>
           <br />
           <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.afterYearsBody}
+            {texts.content.afterYearsBodyLead}
+          </span>
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
+            {texts.content.afterYearsBodyBold}
+          </span>
+          <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
             <br aria-hidden="true" />
             <br aria-hidden="true" />
           </span>

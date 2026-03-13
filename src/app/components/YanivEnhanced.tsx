@@ -91,15 +91,35 @@ export default function YanivEnhanced() {
           <p className="leading-[24px] mb-0" dir="auto">
             &nbsp;
           </p>
-          <p className="mb-0" dir="auto">
+          <p className="mb-4" dir="auto">
             <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
               {texts.content.afterYearsTitle}
-            </span>
-            <br />
+            </span>            
             <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-              {texts.content.afterYearsBody}
-              <br aria-hidden="true" />
-              <br aria-hidden="true" />
+              {texts.content.afterYearsBodyLead}
+            </span>
+            <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
+              {texts.content.afterYearsBodyBold}
+            </span>
+            <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">               
+            </span>
+          </p>
+          <p className="mb-2" dir="auto">
+            <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px] mb-2">
+              {texts.content.afterYearsBody2Lead}
+            </span>
+            <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
+              {texts.content.afterYearsBody2Bold}
+            </span>
+          </p>
+          <p className="mb-2" dir="auto">
+            <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
+              {texts.content.afterYearsBody3}
+            </span>
+          </p>
+          <p className="mb-2" dir="auto">
+            <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
+              {texts.content.afterYearsBody4}
             </span>
           </p>
           <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]" dir="auto">
