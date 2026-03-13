@@ -7,46 +7,6 @@ const imgImage770 = heroImage;
 import { OrangeCTAButton, WhatsAppButton } from "./CTAButtons";
 import { texts } from "../../constants/texts";
 
-function Frame1() {
-  return (
-    <div className="absolute content-stretch flex gap-[12px] items-start justify-end left-[32px] top-[1194px]">
-      <div className="relative shrink-0 size-[20px]" data-name="Small - Birth">
-        <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[20px] top-1/2" data-name="Normal - Birth">
-          <div className="absolute inset-[16.67%_21.64%_16.67%_19.56%]" data-name="Icon">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.758 13.334">
-              <path d={svgPaths.p295eac00} fill="var(--fill-0, #F56932)" id="Icon" />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">{texts.content.maxResultMinFrictionTitle}</span>
-      </p>
-    </div>
-  );
-}
-
-function Frame2() {
-  return (
-    <div className="absolute content-stretch flex gap-[12px] items-start justify-end left-[32px] top-[1278px]">
-      <div className="relative shrink-0 size-[20px]" data-name="Small - Birth">
-        <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[20px] top-1/2" data-name="Normal - Birth">
-          <div className="absolute inset-[16.67%_21.64%_16.67%_19.56%]" data-name="Icon">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.758 13.334">
-              <path d={svgPaths.p295eac00} fill="var(--fill-0, #F56932)" id="Icon" />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-        </span>
-        <span className="leading-[24px]">{texts.content.maxResultMinFrictionBody}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionBodyEmphasis}</span></span>
-      </p>
-    </div>
-  );
-}
-
 function Frame5() {
   return (
     <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[20px] items-start left-[calc(50%+0.5px)] top-[2250px] w-[330px]">
@@ -110,11 +70,11 @@ export default function YanivEnhanced() {
         </div>
       </div>
       {/* Distance + intro block: flow layout, same visual position via margin */}
-      <div className="mt-[30px] flex flex-col gap-[45px] items-end w-full max-w-[393px] box-border px-[32px]">
+      <div className="mt-[30px] flex flex-col items-end w-full max-w-[393px] box-border px-[32px]">
         <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[28px] not-italic text-[#333] text-[20px] text-right tracking-[0.3px] w-[323px]" dir="auto">
           {texts.content.distanceTitle}
         </p>
-        <div className="font-['SeoulNamsan_CM:Regular',sans-serif] leading-[0] not-italic text-[16px] text-black text-right tracking-[0.3px] w-[328px] whitespace-pre-wrap">
+        <div className="font-['SeoulNamsan_CM:Regular',sans-serif] leading-[0] not-italic text-[16px] text-black text-right tracking-[0.3px] w-[328px] whitespace-pre-wrap mb-6">
           <p className="mb-0" dir="auto">
             <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
               {texts.content.distanceIntro}
@@ -158,9 +118,31 @@ export default function YanivEnhanced() {
             {texts.content.whatMakesProfessionalQuestion}
           </p>
         </div>
+        {/* Bullet row 1 (was Frame1): flow layout */}
+        <div className="flex gap-[12px] items-start justify-end w-full">
+          <div className="shrink-0 size-[20px] flex items-center justify-center" data-name="Small - Birth">
+            <svg className="block size-[20px]" fill="none" preserveAspectRatio="none" viewBox="0 0 11.758 13.334">
+              <path d={svgPaths.p295eac00} fill="var(--fill-0, #F56932)" id="Icon" />
+            </svg>
+          </div>
+          <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
+            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">{texts.content.maxResultMinFrictionTitle}</span>
+          </p>
+        </div>
+        {/* Bullet row 2 (was Frame2): spacing so row 2 starts at 1278 (84px from row 1 top minus row 1 height) */}
+        <div className="flex gap-[12px] items-start justify-end w-full mt-[20px]">
+          <div className="shrink-0 size-[20px] flex items-center justify-center" data-name="Small - Birth">
+            <svg className="block size-[20px]" fill="none" preserveAspectRatio="none" viewBox="0 0 11.758 13.334">
+              <path d={svgPaths.p295eac00} fill="var(--fill-0, #F56932)" id="Icon" />
+            </svg>
+          </div>
+          <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
+            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
+            </span>
+            <span className="leading-[24px]">{texts.content.maxResultMinFrictionBody}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionBodyEmphasis}</span></span>
+          </p>
+        </div>
       </div>
-      <Frame1 />
-      <Frame2 />
       <div className="absolute h-[173px] left-0 top-[1384px] w-[393px]" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 173\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 19.039 -43.25 0.090324 196.5 86.5)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }} />
       <div className="absolute h-[314px] left-0 top-[2206px] w-[393px]" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 314\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 34.556 -43.25 0.16394 196.5 157)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }} />
       <p className="-translate-x-1/2 absolute font-['Corsiva_Hebrew:Regular',sans-serif] italic leading-[34px] left-1/2 text-[36px] text-center text-shadow-[0px_2px_8px_rgba(0,0,0,0.05)] text-white top-[1424px] tracking-[0.3px] w-[323px]" dir="auto">
