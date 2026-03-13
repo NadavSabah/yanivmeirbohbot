@@ -62,7 +62,6 @@ body {
 /* Fix for absolute positioned content */
 [data-name="Yaniv"] {
   position: relative;
-  min-height: 2700px;
 }
 
 /* WhatsApp button hover effect */

@@ -255,55 +255,27 @@ export default function Yaniv() {
         {texts.content.influenceQuote}
       </p>
       <div className="-translate-x-full absolute font-['SF_Pro_Display:Regular',sans-serif] leading-[0] left-[361px] not-italic text-[16px] text-black text-right top-[1623px] tracking-[0.3px] w-[329px] whitespace-pre-wrap">
-        <p className="leading-[24px] mb-0" dir="auto">
-          {texts.content.lectureDeepDive}
-          <br aria-hidden="true" />
-          <br aria-hidden="true" />
-        </p>
-        <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] mb-0" dir="auto">
-          {texts.content.whatWeLearnTitle}
-        </p>
-        <ul className="list-disc mb-0">
-          <li className="mb-0 ms-[24px]">
-            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-              {texts.content.bulletMotivesTitle}
-            </span>
-            <span className="leading-[24px]">
-              {texts.content.bulletMotivesBody}
-            </span>
-          </li>
-          <li className="mb-0 ms-[24px]">
-            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-              {texts.content.bulletCuriosityTitle}
-            </span>
-            <span className="leading-[24px]">
-              {texts.content.bulletCuriosityBody}
-            </span>
-          </li>
-          <li className="ms-[24px]">
-            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-              {texts.content.bulletObjectionsTitle}
-            </span>
-            <span className="leading-[24px]">
-              {texts.content.bulletObjectionsBody}
-              <br aria-hidden="true" />
-              <br aria-hidden="true" />
-            </span>
-          </li>
-        </ul>
         <p className="mb-0" dir="auto">
           <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
             {texts.content.whyImportantTitle}
           </span>
-          <span className="leading-[24px]">
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
             <br aria-hidden="true" />
             {texts.content.whyImportantLead}
           </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-            {texts.content.whyImportantKey}
+          <span className="leading-[24px]">
+            {texts.content.whyImportantKeyLead}
+          </span>
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
+            {texts.content.whyImportantKeyBold1}
           </span>
           <span className="leading-[24px]">
-            {texts.content.whyImportantSuffix}
+            {texts.content.whyImportantKeyMid}
+          </span>
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
+            {texts.content.whyImportantKeyBold2}
+          </span>
+          <span className="leading-[24px]">
             <br aria-hidden="true" />
             <br aria-hidden="true" />
           </span>
@@ -314,30 +286,16 @@ export default function Yaniv() {
             <br aria-hidden="true" />
           </span>
           <span className="leading-[24px]">
-            {texts.content.whoIsItForDescription}
+            {texts.content.whoIsItForDescriptionLead}
+          </span>
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
+            {texts.content.whoIsItForDescriptionBold}
+          </span>
+          <span className="leading-[24px]">
+            {texts.content.whoIsItForDescriptionSuffix}
           </span>
         </p>
-        <ul className="list-disc">
-          <li className="mb-0 ms-[24px]">
-            <span className="leading-[24px]">
-              {texts.content.audienceManagers}
-            </span>
-          </li>
-          <li className="mb-0 ms-[24px]">
-            <span className="leading-[24px]">
-              {texts.content.audienceBusinessOwners}
-            </span>
-          </li>
-          <li className="ms-[24px]">
-            <span className="leading-[24px]">
-              {texts.content.audienceParents}
-            </span>
-          </li>
-        </ul>
       </div>
-      <p className="-translate-x-full absolute font-['SF_Pro_Display:Bold',sans-serif] leading-[28px] left-[362px] not-italic text-[#333] text-[20px] text-right top-[1589px] tracking-[0.3px] whitespace-nowrap" dir="auto">
-        {texts.content.lectureContentTitle}
-      </p>
       <Frame5 />
       <Frame4 />
       <MaskGroup1 />

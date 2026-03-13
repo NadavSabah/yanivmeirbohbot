@@ -7,54 +7,40 @@ const imgImage770 = heroImage;
 import { OrangeCTAButton, WhatsAppButton } from "./CTAButtons";
 import { texts } from "../../constants/texts";
 
-function Frame5() {
-  return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[20px] items-start left-[calc(50%+0.5px)] top-[2250px] w-[330px]">
-      <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[32px] not-italic relative shrink-0 text-[28px] text-center text-white tracking-[0.3px] w-full" dir="auto">
-        {texts.content.inviteLectureTitle}
-      </p>
-      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[24px] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[0.3px] w-full" dir="auto">
-        {texts.content.inviteLectureBody}
-      </p>
-      <WhatsAppButton />
-    </div>
-  );
-}
-
 function Frame4() {
   return (
-      <div className="-translate-x-1/2 absolute content-stretch flex gap-[8px] items-end left-1/2 top-[2560px]">
-        <div className="relative shrink-0 size-[20px]" data-name="Small - InboxFull">
-          <div className="absolute inset-[16.67%_8.33%]" data-name="Icon">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.666 13.334">
-              <path d={svgPaths.p374d6900} fill="var(--fill-0, black)" id="Icon" />
-            </svg>
-          </div>
+    <div className="flex justify-center gap-2 items-center mt-8 mb-4">
+      <div className="relative shrink-0 size-[20px]" data-name="Small - InboxFull">
+        <div className="absolute inset-[16.67%_8.33%]" data-name="Icon">
+          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.666 13.334">
+            <path d={svgPaths.p374d6900} fill="var(--fill-0, black)" id="Icon" />
+          </svg>
         </div>
-        <a
-          href={`mailto:${texts.contact.email}`}
-          className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] whitespace-nowrap hover:text-[#f56932] transition-colors"
-          dir="auto"
-        >
-          {texts.contact.email}
-        </a>
       </div>
+      <a
+        href={`mailto:${texts.contact.email}`}
+        className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic shrink-0 text-[16px] text-black tracking-[0.3px] whitespace-nowrap hover:text-[#f56932] transition-colors"
+        dir="auto"
+      >
+        {texts.contact.email}
+      </a>
+    </div>
   );
 }
 
 export default function YanivEnhanced() {
   return (
-    <div className="bg-white relative size-full" data-name="Yaniv">
+    <div className="bg-white relative w-full min-h-0 overflow-x-hidden" data-name="Yaniv">
       {/* Hero at top: relative container, image first in DOM, content overlays via absolute */}
-      <div className="relative w-[393px] h-[500px]">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none" data-name="PHOTO-2026-03-06-09-36-20 1">
+      <div id="hero-section" className="relative w-full max-w-[393px] h-[500px] mx-auto shrink-0">
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" data-name="PHOTO-2026-03-06-09-36-20 1">
           <img
             alt={texts.accessibility.heroImageAlt}
             className="absolute h-[100.5%] left-[0.02%] max-w-none top-[0%] w-[99.94%] object-cover"
             src={heroImage}
           />
         </div>
-        <div className="hero-content absolute left-0 top-[190px] w-[393px] h-[285px]">
+        <div className="hero-content absolute left-0 top-[190px] z-10 w-[393px] h-[285px]">
           <div className="-translate-x-full absolute left-[361px] top-0 w-[329px] text-right text-white">
             <p className="font-['SF_Pro_Display:Heavy',sans-serif] leading-[32px] text-[32px] tracking-[0.3px] mb-0 text-[#fab997]" dir="auto">
               {texts.content.heroHeadline}
@@ -69,8 +55,10 @@ export default function YanivEnhanced() {
           <OrangeCTAButton className="top-[237px]" />
         </div>
       </div>
+      {/* Single column: intro, gradients, and content aligned and centered */}
+      <div className="flex flex-col w-full max-w-[393px] mx-auto box-border">
       {/* Distance + intro block: flow layout, same visual position via margin */}
-      <div className="mt-[30px] flex flex-col items-end w-full max-w-[393px] box-border px-[32px]">
+      <div className="mt-[30px] flex flex-col items-end w-full box-border px-[32px]">
         <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[28px] not-italic text-[#333] text-[20px] text-right tracking-[0.3px] w-[323px]" dir="auto">
           {texts.content.distanceTitle}
         </p>
@@ -143,98 +131,68 @@ export default function YanivEnhanced() {
           </p>
         </div>
       </div>
-      <div className="absolute h-[173px] left-0 top-[1384px] w-[393px]" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 173\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 19.039 -43.25 0.090324 196.5 86.5)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }} />
-      <div className="absolute h-[314px] left-0 top-[2206px] w-[393px]" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 314\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 34.556 -43.25 0.16394 196.5 157)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }} />
-      <p className="-translate-x-1/2 absolute font-['Corsiva_Hebrew:Regular',sans-serif] italic leading-[34px] left-1/2 text-[36px] text-center text-shadow-[0px_2px_8px_rgba(0,0,0,0.05)] text-white top-[1424px] tracking-[0.3px] w-[323px]" dir="auto">
-        {texts.content.influenceQuote}
-      </p>
-      <div className="-translate-x-full absolute font-['SF_Pro_Display:Regular',sans-serif] leading-[0] left-[361px] not-italic text-[16px] text-black text-right top-[1623px] tracking-[0.3px] w-[329px] whitespace-pre-wrap">
-        <p className="leading-[24px] mb-0" dir="auto">
-          {texts.content.lectureDeepDive}
-          <br aria-hidden="true" />
-          <br aria-hidden="true" />
+      {/* Gradient sections in document flow for natural scroll */}
+      <div className="flex flex-col items-center justify-center h-[173px] w-full mt-10 px-4 min-w-0" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 173\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 19.039 -43.25 0.090324 196.5 86.5)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
+        <p className="font-['Corsiva_Hebrew:Regular',sans-serif] italic leading-[34px] text-[36px] text-center text-shadow-[0px_2px_8px_rgba(0,0,0,0.05)] text-white tracking-[0.3px] w-full max-w-[323px]" dir="auto">
+          {texts.content.influenceQuote}
         </p>
-        <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] mb-0" dir="auto">
-          {texts.content.whatWeLearnTitle}
-        </p>
-        <ul className="list-disc mb-0">
-          <li className="mb-0 ms-[24px]">
-            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-              {texts.content.bulletMotivesTitle}
-            </span>
-            <span className="leading-[24px]">
-              {texts.content.bulletMotivesBody}
-            </span>
-          </li>
-          <li className="mb-0 ms-[24px]">
-            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-              {texts.content.bulletCuriosityTitle}
-            </span>
-            <span className="leading-[24px]">
-              {texts.content.bulletCuriosityBody}
-            </span>
-          </li>
-          <li className="ms-[24px]">
-            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-              {texts.content.bulletObjectionsTitle}
-            </span>
-            <span className="leading-[24px]">
-              {texts.content.bulletObjectionsBody}
-              <br aria-hidden="true" />
-              <br aria-hidden="true" />
-            </span>
-          </li>
-        </ul>
+      </div>
+      <div className="mt-8 w-full box-border px-[32px] min-w-0">
+        <div className="font-['SF_Pro_Display:Regular',sans-serif] leading-[0] not-italic text-[16px] text-black text-right tracking-[0.3px] w-[329px] max-w-full ml-auto whitespace-pre-wrap">
         <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[26px] not-italic text-[18px]">
             {texts.content.whyImportantTitle}
           </span>
-          <span className="leading-[24px]">
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
             <br aria-hidden="true" />
             {texts.content.whyImportantLead}
           </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-            {texts.content.whyImportantKey}
+          <span className="leading-[24px]">
+            {texts.content.whyImportantKeyLead}
+          </span>
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
+            {texts.content.whyImportantKeyBold1}
           </span>
           <span className="leading-[24px]">
-            {texts.content.whyImportantSuffix}
+            {texts.content.whyImportantKeyMid}
+          </span>
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
+            {texts.content.whyImportantKeyBold2}
+          </span>
+          <span className="leading-[24px]">
             <br aria-hidden="true" />
             <br aria-hidden="true" />
           </span>
         </p>
         <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic font-bold text-[18px]">
             {texts.content.whoIsItForTitle}
             <br aria-hidden="true" />
           </span>
           <span className="leading-[24px]">
-            {texts.content.whoIsItForDescription}
+            {texts.content.whoIsItForDescriptionLead}
+          </span>
+          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
+            {texts.content.whoIsItForDescriptionBold}
+          </span>
+          <span className="leading-[24px]">
+            {texts.content.whoIsItForDescriptionSuffix}
           </span>
         </p>
-        <ul className="list-disc">
-          <li className="mb-0 ms-[24px]">
-            <span className="leading-[24px]">
-              {texts.content.audienceManagers}
-            </span>
-          </li>
-          <li className="mb-0 ms-[24px]">
-            <span className="leading-[24px]">
-              {texts.content.audienceBusinessOwners}
-            </span>
-          </li>
-          <li className="ms-[24px]">
-            <span className="leading-[24px]">
-              {texts.content.audienceParents}
-            </span>
-          </li>
-        </ul>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-5 min-h-[240px] py-10 w-[calc(100%+4rem)] -mx-8 mt-6 min-w-0 px-4 box-border" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 314\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 34.556 -43.25 0.16394 196.5 157)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
+          <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[32px] not-italic shrink-0 text-[28px] text-center text-white tracking-[0.3px] w-full max-w-[330px]" dir="auto">
+            {texts.content.inviteLectureTitle}
+          </p>
+          <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[24px] not-italic shrink-0 text-[16px] text-center text-white tracking-[0.3px] w-full max-w-[330px]" dir="auto">
+            {texts.content.inviteLectureBody}
+          </p>
+          <WhatsAppButton className="!w-max" />
+        </div>
+
       </div>
-      <p className="-translate-x-full absolute font-['SF_Pro_Display:Bold',sans-serif] leading-[28px] left-[362px] not-italic text-[#333] text-[20px] text-right top-[1589px] tracking-[0.3px] whitespace-nowrap" dir="auto">
-        {texts.content.lectureContentTitle}
-      </p>
-      <Frame5 />
       <Frame4 />
-      {/* <MaskGroup1 /> */}
+      </div>
     </div>
   );
 }
