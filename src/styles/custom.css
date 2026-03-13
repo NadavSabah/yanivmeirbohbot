@@ -4,6 +4,10 @@
   --main-bg-gradient: linear-gradient(90deg, #FAFAFA 27.34375%, #C5D0D9 70.3125%);
 }
 
+.bg-main-gradient {
+  background: var(--main-bg-gradient);
+}
+
 /* RTL support */
 [dir="auto"] {
   direction: rtl;
