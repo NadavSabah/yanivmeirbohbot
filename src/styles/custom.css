@@ -1,5 +1,9 @@
 /* Custom styles for Hebrew landing page */
 
+:root {
+  --main-bg-gradient: linear-gradient(90deg, #FAFAFA 27.34375%, #C5D0D9 70.3125%);
+}
+
 /* RTL support */
 [dir="auto"] {
   direction: rtl;

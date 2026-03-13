@@ -30,7 +30,7 @@ function Frame4() {
 
 export default function YanivEnhanced() {
   return (
-    <div className="bg-white relative w-full min-h-0 overflow-x-hidden" data-name="Yaniv">
+    <div className="relative w-full min-h-0 overflow-x-hidden" data-name="Yaniv">
       {/* Hero at top: relative container, image first in DOM, content overlays via absolute */}
       <div id="hero-section" className="relative w-full max-w-[393px] h-[500px] mx-auto shrink-0">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" data-name="PHOTO-2026-03-06-09-36-20 1">
