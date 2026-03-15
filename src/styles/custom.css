@@ -10,6 +10,14 @@
   background: var(--bg-main);
 }
 
+/* Text wrap: avoid orphans/widows for paragraphs and spans (override with [text-wrap:auto] etc. when needed) */
+@layer base {
+  p,
+  span {
+    text-wrap: pretty;
+  }
+}
+
 /* RTL support */
 [dir="auto"] {
   direction: rtl;
