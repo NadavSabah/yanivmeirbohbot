@@ -42,7 +42,7 @@ export default function YanivEnhanced() {
         </div>
         <div className="hero-content absolute left-0 top-[190px] z-10 w-[393px] h-[285px]">
           <div className="-translate-x-full absolute left-[361px] top-0 w-[329px] text-right text-white">
-            <p className="font-['SF_Pro_Display:Heavy',sans-serif] leading-[32px] text-[32px] tracking-[0.3px] mb-0 text-[#ffad81] [text-shadow:0_1px_2px_rgba(0,0,0,0.2),0_0_1px_rgba(0,0,0,0.15)]" dir="auto">
+            <p className="font-['SF_Pro_Display:Heavy',sans-serif] leading-[32px] text-[32px] tracking-[0.3px] mb-0 text-[#f48447] [text-shadow:0_1px_2px_rgba(0,0,0,0.2),0_0_1px_rgba(0,0,0,0.15)]" dir="auto">
               {texts.content.heroHeadline}
             </p>
             <p className="font-['SF_Pro_Display:Thin',sans-serif] leading-[32px] text-[27px]" dir="auto">
