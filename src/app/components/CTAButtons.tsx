@@ -30,7 +30,7 @@ export function OrangeCTAButton({ className = "", onClick }: CTAButtonProps) {
       className={`-translate-x-1/2 absolute bg-[#f56932] content-stretch flex h-[44px] items-center justify-center left-1/2 px-[16px] py-[4px] rounded-[4px] hover:bg-[#e55822] transition-all ${className}`}
       data-name="_elements / Button"
     >
-      <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-center text-white tracking-[0.9px] uppercase whitespace-nowrap [text-wrap:auto]" dir="auto">
+      <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-center text-white tracking-[0.9px] uppercase whitespace-nowrap" dir="auto">
         {texts.cta.heroPrimary}
       </p>
     </button>

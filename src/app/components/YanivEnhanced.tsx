@@ -83,8 +83,7 @@ export default function YanivEnhanced() {
             <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
               {texts.content.introBioLine1}
               <br />
-              {texts.content.introBioLine2}
-              <br />
+              {texts.content.introBioLine2}          
               {texts.content.introBioLine3}
             </span>
           </p>
