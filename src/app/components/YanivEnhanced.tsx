@@ -42,10 +42,10 @@ export default function YanivEnhanced() {
         </div>
         <div className="hero-content absolute left-0 top-[190px] z-10 w-[393px] h-[285px]">
           <div className="-translate-x-full absolute left-[361px] top-0 w-[329px] text-right text-white">
-            <p className="font-['SF_Pro_Display:Heavy',sans-serif] leading-[32px] text-[32px] tracking-[0.3px] mb-0 text-[#fab997]" dir="auto">
+            <p className="font-['SF_Pro_Display:Heavy',sans-serif] leading-[32px] text-[32px] tracking-[0.3px] mb-0 text-[#ffad81] [text-shadow:0_1px_2px_rgba(0,0,0,0.2),0_0_1px_rgba(0,0,0,0.15)]" dir="auto">
               {texts.content.heroHeadline}
             </p>
-            <p className="font-['SF_Pro_Display:Thin',sans-serif] leading-[32px] text-[32px]" dir="auto">
+            <p className="font-['SF_Pro_Display:Thin',sans-serif] leading-[32px] text-[27px]" dir="auto">
               {texts.content.heroSubheadline}
             </p>
             <p className="mt-2 font-['SF_Pro_Display:Medium',sans-serif] leading-[24px] text-[16px] tracking-[0.3px]" dir="auto">
@@ -58,7 +58,7 @@ export default function YanivEnhanced() {
       {/* Single column: intro, gradients, and content aligned and centered */}
       <div className="flex flex-col w-full max-w-[393px] mx-auto box-border">
       {/* Distance + intro block: flow layout, same visual position via margin */}
-      <div className="mt-[30px] flex flex-col items-end w-full box-border px-[32px]">
+      <div className="mt-[30px] flex flex-col w-full box-border px-[32px]">
         <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[28px] not-italic text-[#333] text-[20px] text-right tracking-[0.3px] w-[323px]" dir="auto">
           {texts.content.distanceTitle}
         </p>

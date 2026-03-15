@@ -1,6 +1,6 @@
 export const texts = {
   cta: {
-    heroPrimary:"להזמנת הרצאה לאירגון שלי",
+    heroPrimary:"הזמנת הרצאה לארגון שלי",
     heroWhatsAppMessage: "שלום, אני מעוניין/ת לשמוע פרטים נוספים על ההרצאה",
     footerWhatsAppMessage: "שלום, אני מעוניין/ת להזמין הרצאה לארגון",
     stickyHeaderLabel: "Ready to take the next step?",
