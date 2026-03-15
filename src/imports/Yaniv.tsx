@@ -80,9 +80,7 @@ function Frame2() {
   return (
     <div className="absolute content-stretch flex gap-[12px] items-start justify-end left-[32px] top-[1278px]">
       <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-          {texts.content.maxResultMinFrictionTitle}
-        </span>
+        <span className="leading-[24px]">{texts.content.maxResultMinFrictionTitle}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionTitleEmphasis}</span>{texts.content.maxResultMinFrictionTitleSuffix}</span>
         <span className="leading-[24px]">{texts.content.maxResultMinFrictionBody}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionBodyEmphasis}</span></span>
       </p>
       <div className="relative shrink-0 size-[20px]" data-name="Small - Birth">

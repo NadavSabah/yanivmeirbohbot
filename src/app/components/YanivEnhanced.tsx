@@ -129,18 +129,18 @@ export default function YanivEnhanced() {
         {/* Bullet row 1 (was Frame1): flow layout */}
         <div className="flex gap-[12px] items-start justify-end w-full">
           <div className="shrink-0 size-[20px] flex items-center justify-center" data-name="Small - Birth">
-            <svg className="block size-[20px]" fill="none" preserveAspectRatio="none" viewBox="0 0 11.758 13.334">
+            <svg className="block size-[12px]" fill="none" preserveAspectRatio="none" viewBox="0 0 11.758 13.334">
               <path d={svgPaths.p295eac00} fill="var(--fill-0, #F56932)" id="Icon" />
             </svg>
           </div>
           <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
-            <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">{texts.content.maxResultMinFrictionTitle}</span>
+            <span className="leading-[24px]">{texts.content.maxResultMinFrictionTitle}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionTitleEmphasis}</span>{texts.content.maxResultMinFrictionTitleSuffix}</span>
           </p>
         </div>
         {/* Bullet row 2 (was Frame2): spacing so row 2 starts at 1278 (84px from row 1 top minus row 1 height) */}
         <div className="flex gap-[12px] items-start justify-end w-full mt-[20px]">
           <div className="shrink-0 size-[20px] flex items-center justify-center" data-name="Small - Birth">
-            <svg className="block size-[20px]" fill="none" preserveAspectRatio="none" viewBox="0 0 11.758 13.334">
+            <svg className="block size-[12px]" fill="none" preserveAspectRatio="none" viewBox="0 0 11.758 13.334">
               <path d={svgPaths.p295eac00} fill="var(--fill-0, #F56932)" id="Icon" />
             </svg>
           </div>
@@ -152,9 +152,9 @@ export default function YanivEnhanced() {
         </div>
       </div>
       {/* Gradient sections in document flow for natural scroll */}
-      <div className="flex flex-col items-center justify-center h-[173px] w-full mt-10 px-4 min-w-0" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 173\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 19.039 -43.25 0.090324 196.5 86.5)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
-        <p className="font-['Corsiva_Hebrew:Regular',sans-serif] italic leading-[34px] text-[36px] text-center text-shadow-[0px_2px_8px_rgba(0,0,0,0.05)] text-white tracking-[0.3px] w-full max-w-[323px]" dir="auto">
-          {texts.content.influenceQuote}
+      <div className="flex flex-col items-center justify-center h-[173px] w-full mt-10 px-4 min-w-0"
+       style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 173\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 19.039 -43.25 0.090324 196.5 86.5)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
+      <p className="font-['Corsiva_Hebrew:Regular',sans-serif] italic leading-[38px] text-[30px] text-center text-shadow-[0px_2px_8px_rgba(0,0,0,0.05)] text-white tracking-[0.3px] w-full max-w-[323px] [text-wrap:pretty]">{texts.content.influenceQuote}
         </p>
       </div>
       <div className="mt-8 w-full box-border px-[32px] min-w-0">
@@ -201,10 +201,10 @@ export default function YanivEnhanced() {
         </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-5 min-h-[240px] py-10 w-[calc(100%+4rem)] -mx-8 mt-6 min-w-0 px-4 box-border" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 314\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 34.556 -43.25 0.16394 196.5 157)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
-          <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[32px] not-italic shrink-0 text-[28px] text-center text-white tracking-[0.3px] w-full max-w-[330px]" dir="auto">
+          <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[32px] not-italic shrink-0 text-[28px] text-center text-white tracking-[0.3px] w-full max-w-[330px]">
             {texts.content.inviteLectureTitle}
           </p>
-          <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[24px] not-italic shrink-0 text-[16px] text-center text-white tracking-[0.3px] w-full max-w-[330px]" dir="auto">
+          <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[24px] not-italic shrink-0 text-[16px] text-center text-white tracking-[0.3px] w-full max-w-[330px]">
             {texts.content.inviteLectureBody}
           </p>
           <WhatsAppButton className="!w-max" />
