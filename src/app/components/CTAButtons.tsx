@@ -3,7 +3,7 @@ import { texts } from "../../constants/texts";
 
 const WHATSAPP_NUMBER = "972508803015";
 
-/** Open WhatsApp with optional prefilled message. Use for sticky header / any CTA that shares the same number. */
+/** Open WhatsApp with optional prefilled message. */
 export function openWhatsApp(message?: string) {
   const text = message != null ? message : texts.cta.heroWhatsAppMessage;
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
@@ -12,9 +12,14 @@ export function openWhatsApp(message?: string) {
 interface CTAButtonProps {
   className?: string;
   onClick?: () => void;
+  position?: "absolute" | "static";
 }
 
-export function OrangeCTAButton({ className = "", onClick }: CTAButtonProps) {
+// Fixed width and height to ensure both buttons are twins
+export const CTA_BASE_CLASSES =
+  "h-[48px] min-h-[48px] w-full max-w-[343px] lg:max-w-[320px] box-border px-8 rounded-[6px] font-bold text-[16px] tracking-wider transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 lg:hover:-translate-y-1 lg:hover:brightness-110 flex items-center justify-center";
+
+export function PrimaryCTAButton({ className = "", onClick, position = "static" }: CTAButtonProps) {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -23,17 +28,20 @@ export function OrangeCTAButton({ className = "", onClick }: CTAButtonProps) {
     }
   };
 
+  const positioningClasses = position === "absolute" ? "-translate-x-1/2 absolute left-1/2" : "relative";
+
   return (
-    <button
-      id="hero-cta"
-      onClick={handleClick}
-      className={`-translate-x-1/2 absolute bg-[#f56932] content-stretch flex h-[44px] items-center justify-center left-1/2 px-[16px] py-[4px] rounded-[4px] hover:bg-[#e55822] transition-all ${className}`}
-      data-name="_elements / Button"
-    >
-      <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-center text-white tracking-[0.9px] uppercase whitespace-nowrap" dir="auto">
-        {texts.cta.heroPrimary}
-      </p>
-    </button>
+    <div className={`w-full flex ${positioningClasses}`}>
+      <button
+        id="hero-cta"
+        onClick={handleClick}
+        className={`${CTA_BASE_CLASSES} bg-[#0086E3] hover:bg-[#0075C7] text-white ${className}`}
+      >
+        <span className="font-['Helvetica_Neue:Bold',sans-serif] uppercase tracking-wider">
+          {texts.cta.heroPrimary}
+        </span>
+      </button>
+    </div>
   );
 }
 
@@ -47,33 +55,22 @@ export function WhatsAppButton({ className = "", onClick }: CTAButtonProps) {
   };
 
   return (
-    <button
-      onClick={handleClick}
-      id="footer-cta"
-      className={`bg-white h-[44px] relative rounded-[4px] shrink-0 w-full hover:bg-gray-50 transition-all ${className}`}
-      data-name="_elements / Button"
-    >
-      <div className="flex flex-row items-center justify-center size-full">
-        <div className="content-stretch flex items-center justify-center px-[16px] py-[4px] relative size-full">
-          <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
-            <div className="relative shrink-0 size-[20px]" data-name="Small - SocialWhatsappCircle">
-              <div className="absolute inset-[8.33%]" data-name="Circle">
-                <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.6667 16.6667">
-                  <circle cx="8.33333" cy="8.33333" fill="var(--fill-0, #49CF77)" id="Circle" r="8.33333" />
-                </svg>
-              </div>
-              <div className="absolute inset-1/4" data-name="Icon">
-                <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10 10">
-                  <path clipRule="evenodd" d="M0 10L0.706271 7.43208C0.270451 6.68042 0.0414469 5.82833 0.0418655 4.95458C0.0431215 2.22292 2.27665 0 5.02093 0C6.35268 0.000416667 7.60278 0.516667 8.54308 1.45333C9.48296 2.39 10.0004 3.635 10 4.95917C9.99874 7.69125 7.76522 9.91417 5.02093 9.91417C4.18781 9.91375 3.36683 9.70583 2.63962 9.31083L0 10ZM2.72551 8.49585C3.43197 8.91511 4.10639 9.16625 4.99831 9.16667C7.29472 9.16667 9.1654 7.29833 9.16667 5.00147C9.16751 2.69998 7.30568 0.834176 5.00169 0.833333C2.70359 0.833333 0.834177 2.70167 0.833334 4.9981C0.832912 5.93564 1.10774 6.63763 1.5693 7.37207L1.1482 8.90921L2.72551 8.49585ZM7.06823 6.01176C7.0427 5.96568 6.97439 5.93819 6.87159 5.88282C6.76913 5.82745 6.2651 5.56026 6.17092 5.52347C6.07708 5.48669 6.00878 5.4681 5.94013 5.57884C5.87182 5.68921 5.67518 5.93819 5.61549 6.01176C5.55581 6.08534 5.49578 6.09463 5.39332 6.03926C5.29086 5.98389 4.96036 5.86758 4.56881 5.49114C4.26418 5.19832 4.05823 4.83675 3.99854 4.72601C3.93886 4.61564 3.99233 4.55582 4.04339 4.50082C4.08962 4.45139 4.14585 4.37187 4.19726 4.30721C4.24935 4.2433 4.26625 4.19722 4.30075 4.12327C4.3349 4.04969 4.318 3.98503 4.29213 3.92966C4.26625 3.87466 4.06133 3.33101 3.97612 3.1099C3.89263 2.89474 3.80811 2.92373 3.74532 2.92038L3.54868 2.91667C3.48037 2.91667 3.36929 2.94417 3.27545 3.0549C3.18162 3.16564 2.91667 3.43245 2.91667 3.97611C2.91667 4.51977 3.28408 5.04485 3.33513 5.11842C3.38654 5.192 4.05788 6.30756 5.08628 6.78582C5.33088 6.89953 5.522 6.96753 5.67069 7.01844C5.91632 7.10242 6.13987 7.09053 6.31651 7.06229C6.51349 7.0307 6.92299 6.79511 7.00855 6.53721C7.0941 6.27895 7.0941 6.05784 7.06823 6.01176V6.01176Z" fill="var(--fill-0, white)" fillRule="evenodd" id="Icon" />
-                </svg>
-              </div>
-            </div>
-            <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#333] text-[15px] text-center tracking-[0.9px] uppercase whitespace-nowrap" dir="auto">
-              {texts.cta.heroPrimary}
-            </p>
-          </div>
+    /* This wrapper div is the secret sauce to matching the Primary button alignment */
+    <div className="w-full flex justify-center relative">
+      <button
+        onClick={handleClick}
+        id="footer-cta"
+        className={`${CTA_BASE_CLASSES} flex-row-reverse items-center justify-center gap-3 bg-white text-[#333] border border-gray-200 hover:bg-gray-50 ${className}`}
+      >
+        <div className="shrink-0 bg-[#49CF77] rounded-full p-[4px] size-[24px] flex items-center justify-center" aria-hidden="true">
+          <svg viewBox="0 0 24 24" className="block size-[12px] fill-white" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+          </svg>
         </div>
-      </div>
-    </button>
+        <span className="font-['Helvetica_Neue:Bold',sans-serif] uppercase tracking-wider text-right">
+          {texts.cta.heroPrimary}
+        </span>
+      </button>
+    </div>
   );
 }

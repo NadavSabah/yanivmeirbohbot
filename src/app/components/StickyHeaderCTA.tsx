@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { texts } from "../../constants/texts";
-import { openWhatsApp } from "./CTAButtons";
+import { CTA_BASE_CLASSES, openWhatsApp } from "./CTAButtons";
 
 type StickyHeaderCTAProps = {
   onClick?: () => void;
@@ -62,17 +62,17 @@ export const StickyHeaderCTA: React.FC<StickyHeaderCTAProps> = ({ onClick }) => 
       ].join(" ")}
       aria-hidden={!isVisible}
     >
-      <div className="bg-black/30 backdrop-blur-md">
-        <div className="mx-auto max-w-5xl px-4 py-6 flex items-center justify-center md:justify-between gap-3">
-          <p className="hidden md:block text-sm text-white/80">
+      <div className="bg-black/05 backdrop-blur-md">
+        <div className="relative mx-auto max-w-5xl px-4 py-3 flex items-center justify-center gap-3">
+          <p className="hidden md:block absolute left-4 text-sm text-white/80">
             {texts.cta.stickyHeaderLabel}
           </p>
           <button
             type="button"
             onClick={onClick ?? (() => openWhatsApp(texts.cta.heroWhatsAppMessage))}
-            className="content-stretch flex h-[44px] items-center justify-center px-[16px] py-[4px] rounded-[4px] bg-[#f56932] hover:bg-[#e55822] transition-all"
+            className={`${CTA_BASE_CLASSES} bg-[#0086E3] text-white hover:bg-[#0075C7]`}
           >
-            <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-center text-white tracking-[0.9px] uppercase whitespace-nowrap" dir="auto">
+            <p className="font-['Helvetica_Neue:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white tracking-wider whitespace-nowrap" dir="auto">
               {texts.cta.heroPrimary}
             </p>
           </button>
