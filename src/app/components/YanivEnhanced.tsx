@@ -43,18 +43,21 @@ export default function YanivEnhanced() {
     <div className="relative w-full min-h-0 overflow-x-hidden text-center lg:text-right" data-name="Yaniv">
       <div className="flex flex-col w-full box-border">
       {/* Hero at top: relative container, image first in DOM, content overlays via absolute */}
-      <div id="hero-section" className="relative w-full h-[500px] lg:h-[850px] shrink-0">
+      <div id="hero-section" className="relative w-full h-[500px] lg:h-[850px] shrink-0 overflow-hidden bg-[#121d2a]">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" data-name="PHOTO-2026-03-06-09-36-20 1">
-          <img
-            alt={texts.accessibility.heroImageAlt}
-            className="absolute inset-0 w-full h-full object-cover object-[50%_30%] lg:object-left lg:object-top lg:scale-100 transition-transform duration-1000"
-            src={heroImage}
-          />
-          <div className="hidden lg:block absolute inset-0 lg:bg-gradient-to-l lg:from-black/80 lg:via-black/20 lg:to-transparent" />
+          <div className="absolute inset-0 max-w-screen-2xl mx-auto relative h-full">
+            <img
+              alt={texts.accessibility.heroImageAlt}
+              className="absolute inset-0 w-full h-full object-cover object-[50%_30%] lg:object-contain lg:object-left lg:scale-105 transition-transform duration-1000"
+              src={heroImage}
+            />
+          </div>
+          <div className="absolute top-0 right-0 h-full w-[40%] bg-[#121d2a] blur-[120px] lg:block hidden translate-x-[20%]" />
+          <div className="hidden lg:block absolute inset-0 opacity-100 bg-[radial-gradient(circle_at_25%_40%,_transparent_10%,_#121d2a_75%,_#121d2a_100%)]" />
         </div>
         <div className="w-full max-w-screen-xl mx-auto px-6 lg:px-20 relative h-full z-10 box-border">
           <div className="pt-[220px] lg:pt-[130px] flex flex-col items-center lg:items-end">
-            <div className="w-full max-w-full lg:max-w-[700px] text-center lg:text-right text-white lg:mr-0 lg:ml-auto lg:-mt-[10px] lg:bg-black/60 lg:backdrop-blur-lg lg:p-12 lg:rounded-3xl lg:border lg:border-white/10">
+            <div className="w-full max-w-full lg:max-w-[700px] text-center lg:text-right text-white lg:ml-auto lg:mr-0 2xl:mr-[5%] lg:-mt-[10px] lg:bg-black/20 lg:backdrop-blur-lg lg:p-12 lg:rounded-3xl lg:border lg:border-white/10">
               <p className="font-['SF_Pro_Display:Heavy',sans-serif] font-bold leading-[32px] text-[32px] lg:text-8xl lg:leading-[1.1] tracking-[0.3px] lg:tracking-tighter mb-0 [text-shadow:0_1px_2px_rgba(0,0,0,0.2),0_0_1px_rgba(0,0,0,0.15)] text-center lg:text-right" dir="auto">
                 {texts.content.heroHeadline}
               </p>
