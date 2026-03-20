@@ -44,7 +44,7 @@ export const texts = {
     whoIsItForTitle: "למי ההרצאה מתאימה?",
     whoIsItForBody:
       "לכל מי שרוצה למקסם את יכולת ההשפעה שלו בבית, בזוגיות ובארגון.",
-    whatIsDifferentTitle: "מה שונה מהרצאות אחרות?",
+    whatIsDifferentTitle: "במה הרצאה זו שונה מאחרות?",
     whatIsDifferentBody:
       "זו לא הרצאה על 'איך לדבר נכון', אלא על איך להבין בני אדם לעומק ולפעול לא מתוך אינטואיציה, אלא מתוך מיומנות.",
     howDeliveredTitle: "איך ההרצאה מועברת בפועל?",
@@ -57,7 +57,7 @@ export const texts = {
     customizationTitle: "אפשר להתאים את ההרצאה לארגון/צוות?",
     customizationBody: "כן. התוכן מותאם למציאות ולצרכים של הארגון.",
     howToBookTitle: "איך מזמינים את ההרצאה לארגון?",
-    howToBookBody: "שולחים הודעה/אימייל ונקבע שיחה טלפונית.",
+    howToBookBody: "צרו קשר דרך הודעה/אימייל ונקבע שיחה טלפונית.",
   },
   accessibility: {
     heroImageAlt: "יניב מאיר בוחבוט",

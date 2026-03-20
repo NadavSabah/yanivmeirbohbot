@@ -42,13 +42,15 @@ function BulletIcon() {
 
 function BulletTextRow({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`flex justify-start gap-[12px] items-start w-full${className ? ` ${className}` : ""}`}>
-      <BulletIcon />
-      <p
-        className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic text-[16px] lg:text-[18px] text-black text-right tracking-[0.3px] w-full max-w-full lg:max-w-[520px]"
-        dir="auto"
-      >
-        <span className="leading-[24px]">{children}</span>
+    <div
+      className={`flex flex-row items-start gap-3 w-full min-w-0${className ? ` ${className}` : ""}`}
+      dir="rtl"
+    >
+      <div className="shrink-0 pt-0.5">
+        <BulletIcon />
+      </div>
+      <p className="min-w-0 flex-1 font-['SF_Pro_Display:Regular',sans-serif] text-[16px] lg:text-[18px] leading-[26px] text-black text-right tracking-[0.3px]">
+        {children}
       </p>
     </div>
   );
@@ -94,7 +96,7 @@ export default function YanivEnhanced() {
       <div className="mt-[30px] flex flex-col w-full box-border lg:max-w-screen-xl mx-auto px-6 lg:px-20">
         <div className="flex flex-col items-start lg:items-start lg:py-24" dir="rtl">
           <p
-            className="whitespace-pre-line font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[28px] not-italic text-[#333] text-[20px] lg:text-[32px] text-right tracking-[0.3px] w-full max-w-full lg:max-w-[850px]"
+            className="whitespace-pre-line font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[28px] mb-4 not-italic text-[#333] text-[20px] lg:text-[32px] text-right tracking-[0.3px] w-full max-w-full lg:max-w-[850px]"
             dir="rtl"
           >
             {texts.content.distanceTitle}
@@ -162,12 +164,17 @@ export default function YanivEnhanced() {
           </p>
         </div>
       </div>
-      <div className="w-full lg:max-w-[850px] lg:ml-auto lg:flex lg:flex-col lg:gap-6 lg:items-start" dir="rtl">
+      <div className="w-full max-w-screen-xl mx-auto px-6 lg:px-20 box-border lg:mt-20">
+        <div
+          className="flex flex-col items-start gap-4 lg:gap-6 w-full max-w-full lg:max-w-[850px] text-right"
+          dir="rtl"
+        >
           <BulletTextRow>{texts.content.maxResultMinFrictionTitle}</BulletTextRow>
-          <BulletTextRow className="mt-[15px] lg:mt-0">{texts.content.maxResultMinFrictionBody}</BulletTextRow>
-          <BulletTextRow className="mt-[15px] lg:mt-0">{texts.content.maxResultMinFrictionBullet3}</BulletTextRow>
-          <BulletTextRow className="mt-[15px] lg:mt-0">{texts.content.maxResultMinFrictionBullet4}</BulletTextRow>
+          <BulletTextRow>{texts.content.maxResultMinFrictionBody}</BulletTextRow>
+          <BulletTextRow>{texts.content.maxResultMinFrictionBullet3}</BulletTextRow>
+          <BulletTextRow>{texts.content.maxResultMinFrictionBullet4}</BulletTextRow>
         </div>
+      </div>
       <div className="mt-8 mb-4 lg:mt-24 w-full box-border min-w-0">
         <div className="w-full lg:max-w-screen-xl mx-auto px-6 lg:px-20 box-border">
         <div
