@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import svgPaths from "../../imports/svg-16itobd6e1";
 import heroImage from "../../assets/heroImage.jpeg";
 import footer_background_image from "../../assets/footer_background.jpeg";
@@ -5,6 +6,7 @@ import footer_background_image from "../../assets/footer_background.jpeg";
 // Use the hero image wherever the old figma placeholder (imgImage770) was used
 const imgImage770 = heroImage;
 import { PrimaryCTAButton, WhatsAppButton } from "./CTAButtons";
+import { InfoSection } from "./InfoSection";
 import { texts } from "../../constants/texts";
 
 function Frame4() {
@@ -34,6 +36,20 @@ function BulletIcon() {
       <svg className="block size-[12px]" fill="none" preserveAspectRatio="none" viewBox="0 0 11.758 13.334">
         <path d={svgPaths.p295eac00} fill="#0086E3" />
       </svg>
+    </div>
+  );
+}
+
+function BulletTextRow({ children, className }: { children: ReactNode; className?: string }) {
+  return (
+    <div className={`flex justify-start gap-[12px] items-start w-full${className ? ` ${className}` : ""}`}>
+      <BulletIcon />
+      <p
+        className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic text-[16px] lg:text-[18px] text-black text-right tracking-[0.3px] w-full max-w-full lg:max-w-[520px]"
+        dir="auto"
+      >
+        <span className="leading-[24px]">{children}</span>
+      </p>
     </div>
   );
 }
@@ -78,7 +94,7 @@ export default function YanivEnhanced() {
       <div className="mt-[30px] flex flex-col w-full box-border lg:max-w-screen-xl mx-auto px-6 lg:px-20">
         <div className="flex flex-col items-start lg:items-start lg:py-24" dir="rtl">
           <p
-            className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[28px] not-italic text-[#333] text-[20px] lg:text-[32px] text-right tracking-[0.3px] w-full max-w-full lg:max-w-[850px]"
+            className="whitespace-pre-line font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[28px] not-italic text-[#333] text-[20px] lg:text-[32px] text-right tracking-[0.3px] w-full max-w-full lg:max-w-[850px]"
             dir="rtl"
           >
             {texts.content.distanceTitle}
@@ -90,27 +106,7 @@ export default function YanivEnhanced() {
           >
             <p className="mb-0">
               <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-                {texts.content.distanceIntro}
-              </span>
-              <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-                {texts.content.distanceExample}
-                <br aria-hidden="true" />
-                <br aria-hidden="true" />
-              </span>
-            </p>
-
-            <p className="mb-0">
-              <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-                {texts.content.introNiceToMeet}
-              </span>
-              <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-                {texts.content.introName}
-              </span>
-              <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-                {texts.content.introBioLine1}
-                <br />
-                {texts.content.introBioLine2}
-                {texts.content.introBioLine3}
+                {texts.content.introParagraph}
               </span>
             </p>
 
@@ -143,39 +139,16 @@ export default function YanivEnhanced() {
               </span>
             </p>
 
-            <p className="mb-2">
-              <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-                {texts.content.afterYearsBody4}
-              </span>
-            </p>
-
             <p className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
               {texts.content.whatMakesProfessionalQuestion}
             </p>
           </div>
         </div>
 
-        <div className="w-full lg:max-w-[850px] lg:ml-auto lg:flex lg:flex-col lg:gap-6 lg:items-start" dir="rtl">
-          {/* Bullet row 1 (was Frame1): flow layout */}
-          <div className="flex justify-start gap-[12px] items-start w-full">
-            <BulletIcon />
-            <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic text-[16px] lg:text-[18px] text-black text-right tracking-[0.3px] w-full max-w-full lg:max-w-[520px]" dir="auto">
-              <span className="leading-[24px]">{texts.content.maxResultMinFrictionTitle}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionTitleEmphasis}</span>{texts.content.maxResultMinFrictionTitleSuffix}</span>
-            </p>
-          </div>
-          {/* Bullet row 2 (was Frame2): spacing so row 2 starts at 1278 (84px from row 1 top minus row 1 height) */}
-          <div className="flex justify-start gap-[12px] items-start w-full mt-[20px] lg:mt-0">
-            <BulletIcon />
-            <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic text-[16px] lg:text-[18px] text-black text-right tracking-[0.3px] w-full max-w-full lg:max-w-[520px]" dir="auto">
-              <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-              </span>
-              <span className="leading-[24px]">{texts.content.maxResultMinFrictionBody}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionBodyEmphasis}</span></span>
-            </p>
-          </div>
-        </div>
+   
       </div>
       {/* Gradient sections in document flow for natural scroll */}
-      <div className="relative flex flex-col items-center justify-center w-full mt-10 lg:mt-24 min-w-0 py-16 px-6 lg:px-20 lg:py-60 lg:items-center lg:text-center lg:bg-fixed lg:[--quote-bg-attachment:fixed]"
+      <div className="relative flex flex-col items-center justify-center w-full mb-10 lg:mt-24 min-w-0 py-16 px-6 lg:px-20 lg:py-60 lg:items-center lg:text-center lg:bg-fixed lg:[--quote-bg-attachment:fixed]"
        style={{
          backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 173\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 19.039 -43.25 0.090324 196.5 86.5)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')",
          backgroundRepeat: "no-repeat",
@@ -189,49 +162,26 @@ export default function YanivEnhanced() {
           </p>
         </div>
       </div>
+      <div className="w-full lg:max-w-[850px] lg:ml-auto lg:flex lg:flex-col lg:gap-6 lg:items-start" dir="rtl">
+          <BulletTextRow>{texts.content.maxResultMinFrictionTitle}</BulletTextRow>
+          <BulletTextRow className="mt-[15px] lg:mt-0">{texts.content.maxResultMinFrictionBody}</BulletTextRow>
+          <BulletTextRow className="mt-[15px] lg:mt-0">{texts.content.maxResultMinFrictionBullet3}</BulletTextRow>
+          <BulletTextRow className="mt-[15px] lg:mt-0">{texts.content.maxResultMinFrictionBullet4}</BulletTextRow>
+        </div>
       <div className="mt-8 mb-4 lg:mt-24 w-full box-border min-w-0">
         <div className="w-full lg:max-w-screen-xl mx-auto px-6 lg:px-20 box-border">
-        <div className="font-['SF_Pro_Display:Regular',sans-serif] leading-[0] not-italic text-[16px] lg:text-[18px] text-black text-center lg:text-right tracking-[0.3px] w-full max-w-full lg:max-w-[720px] whitespace-pre-wrap overflow-x-hidden">
-        <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[26px] not-italic text-[18px] lg:text-[32px]">
-            {texts.content.whyImportantTitle}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-            <br aria-hidden="true" />
-            {texts.content.whyImportantLead}
-          </span>
-          <span className="leading-[24px]">
-            {texts.content.whyImportantKeyLead}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
-            {texts.content.whyImportantKeyBold1}
-          </span>
-          <span className="leading-[24px]">
-            {texts.content.whyImportantKeyMid}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
-            {texts.content.whyImportantKeyBold2}
-          </span>
-          <span className="leading-[24px]">
-            <br aria-hidden="true" />
-            <br aria-hidden="true" />
-          </span>
-        </p>
-        <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic font-bold text-[18px] lg:text-[32px]">
-            {texts.content.whoIsItForTitle}
-            <br aria-hidden="true" />
-          </span>
-          <span className="leading-[24px]">
-            {texts.content.whoIsItForDescriptionLead}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
-            {texts.content.whoIsItForDescriptionBold}
-          </span>
-          <span className="leading-[24px]">
-            {texts.content.whoIsItForDescriptionSuffix}
-          </span>
-        </p>
+        <div
+          className="font-['SF_Pro_Display:Regular',sans-serif] leading-[0] not-italic text-[16px] lg:text-[18px] text-black text-center lg:text-right tracking-[0.3px] w-full max-w-full lg:max-w-[720px] whitespace-pre-wrap overflow-x-hidden"
+          dir="rtl"
+        >
+          <InfoSection title={texts.content.whyImportantTitle} body={texts.content.whyImportantBody} />
+          <InfoSection title={texts.content.whoIsItForTitle} body={texts.content.whoIsItForBody} />
+          <InfoSection title={texts.content.whatIsDifferentTitle} body={texts.content.whatIsDifferentBody} />
+          <InfoSection title={texts.content.howDeliveredTitle} body={texts.content.howDeliveredBody} />
+          <InfoSection title={texts.content.notAManagerTitle} body={texts.content.notAManagerBody} />
+          <InfoSection title={texts.content.lectureDurationTitle} body={texts.content.lectureDurationBody} />
+          <InfoSection title={texts.content.customizationTitle} body={texts.content.customizationBody} />
+          <InfoSection title={texts.content.howToBookTitle} body={texts.content.howToBookBody} />
         </div>
         </div>
       </div>

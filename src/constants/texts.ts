@@ -7,50 +7,57 @@ export const texts = {
     getStarted: "Get Started Now",
   },
   content: {
-    transitionFromIntuitionToMethodTitle: "המעבר מאינטואיציה לשיטה:",
+    transitionFromIntuitionToMethodTitle: "המעבר מאינטואיציה לשיטה:", 
+    
     transitionFromIntuitionToMethodBody: " להפסיק לנחש ולהתחיל להשתמש בכלים פסיכולוגיים ומנטליים מוכחים.",
-    maxResultMinFrictionTitle: "איך לזהות את ",
-    maxResultMinFrictionTitleEmphasis: "הרצון האמיתי",
-    maxResultMinFrictionTitleSuffix: " שמסתתר מאחורי ההתנהגות.",
-    maxResultMinFrictionBody: "איך להפוך רגע של התנגדות דווקא להזדמנות וליצור ",
-    maxResultMinFrictionBodyEmphasis: "השפעה עמוקה לאורך זמן.",
-    inviteLectureTitle: "הדרך שבה תבינו ותניעו אנשים הולכת להשתנות",
+    maxResultMinFrictionTitle: "איך מזהים את הרצון האמיתי שמאחורי ההתנהגות?",
+    maxResultMinFrictionBody: "מה הדבר האחד שחייבים לגלות כדי לייצר השפעה?",
+    maxResultMinFrictionBullet3:
+      "איך הופכים רגע של התנגדות להזדמנות להשפעה עמוקה ולאורך זמן?",
+    maxResultMinFrictionBullet4:
+      "איזה מוטיבציות קיימות בכל אדם אנושי באופן טבעי שנוכל להשתמש בהן?",
+    inviteLectureTitle: "מה הדבר האחד שחייבים לגלות כדי לייצר השפעה?",
     inviteLectureBody: "אני מזמין אתכם לחוויה אישית שתתן לכם כלים מעשיים להנעה מתוך חופש בחירה.",
     heroHeadline: "השפעה כדרך חיים",
     heroSubheadline: "הופכים את יכולת ההשפעה מאינטואיציה למיומנות.",
     heroDescription:"הרצאה של יניב מאיר בוחבוט שמגלה גישה ייחודית למקסום יכולת ההנעה שלכם בעבודה, בבית ובחיים.",
-    distanceTitle:"המרחק בין \"לדבר לקיר\" להנעה אמיתית",
-    distanceIntro:"מכירים את הרגעים האלה שאתם מנסים להניע מישהו, וזה מרגיש כאילו אתם מדברים לקיר?",
-    distanceExample:" זה יכול לקרות מול ילד עייף שמסרב להיכנס להתקלח, או מול עובד שגורר משימה קריטית כבר שבוע.",
-    introNiceToMeet: "נעים מאוד, אני ",
-    introName: "יניב מאיר בוחבוט",
-    introBioLine1:
-      " אבא, בן זוג, מאמן מנטלי ומפקד פלגה במילואים.",
-    introBioLine2:
-      "בשני העשורים האחרונים הכשרתי מאות חיילים להטיס מערכות כטב\"ם צבאיות בצה\"ל ובמוסדות בטחון בעולם ",
-    introBioLine3:
-      "וניהלתי פרויקטים עתירי תקציב עם צוותים גדולים בארץ ובעולם.",
+    distanceTitle:
+      "מה המשותף לעובד שלא זז, ילד שמסרב לצחצח שיניים וחייל אפריקאי שמטיס כטב\"ם? התשובה היא לא מה שחשבתם, והיא המפתח שלכם להצלחה",
+    introParagraph:
+      "נעים מאוד, אני יניב מאיר בוחבוט אבא, בן זוג, מאמן מנטלי ומפקד פלגה במילואים. בשני העשורים האחרונים הכשרתי מאות חיילים להטיס מערכות כטב\"ם צבאיות בצה\"ל ובמוסדות בטחון בעולם וניהלתי פרויקטים עתירי תקציב עם צוותים גדולים בארץ ובעולם.",
     afterYearsTitle: "אחרי שנים של הובלה בשטח, גיליתי משהו מעניין, ",
     afterYearsBodyLead:
       "להניע את הילד שלי לצחצח שיניים,להוביל עובד לקחת אחריות על משימה, או להכשיר חייל באפריקה שמעולם לא החזיק סכין ומזלג להטיס כטב''מ ",
     afterYearsBodyBold: "דורש את אותה מיומנות.",
     afterYearsBody2Lead: "ומה שהכי עניין אותי לאורך השנים זה דווקא הרגעים שבהם ",
     afterYearsBody2Bold: "אנחנו נתקלים בהתנגדות.",
-    afterYearsBody3: "הרגעים שבהם מישהו נסגר, מתווכח, מתעלם או סתם לא זז.",
+    afterYearsBody3:
+      "הרגעים שבהם מישהו נסגר, מתווכח, מתעלם או סתם לא זז יכולים להיות מאוד מתסכלים.",
     afterYearsBody4: "בדיוק שם רוב האנשים מתרחקים, מתעצבנים או מפעילים כוח.",
-    whatMakesProfessionalQuestion: "בהרצאה אני מציג גישה אחרת:",
+    whatMakesProfessionalQuestion:
+      "בהרצאה אני מציג גישה אחרת שהופכת את פעולת ההנעה לחוויה טובה ומסקרנת.",
     influenceQuote:
       "השפעה אמיתית לא רק מניעה לפעולה היא משפרת מערכות יחסים.",
     whyImportantTitle: "למה זה חשוב?",
-    whyImportantLead: "השפעה נכונה היא לא רק כלי להשגת תוצאות היא ",
-    whyImportantKeyLead: "היא הדרך לבנות ",
-    whyImportantKeyBold1: "מערכות יחסים טובות יותר,לייצר מחויבות אמיתית",
-    whyImportantKeyMid: " ולגרום לאנשים לפעול ",
-    whyImportantKeyBold2: "כי הם רוצים.",
-    whoIsItForTitle: "למי ההרצאה מתאימה? ",
-    whoIsItForDescriptionLead: "לכל מי שרוצה ",
-    whoIsItForDescriptionBold: "למקסם את יכולת ההשפעה שלו",
-    whoIsItForDescriptionSuffix:" בבית, בזוגיות ובארגון.",
+    whyImportantBody:
+      "השפעה נכונה היא לא רק כלי להשגת תוצאות, היא הדרך לבנות מערכות יחסים טובות יותר, לייצר מחויבות אמיתית ולגרום לאנשים לפעול מרצון.",
+    whoIsItForTitle: "למי ההרצאה מתאימה?",
+    whoIsItForBody:
+      "לכל מי שרוצה למקסם את יכולת ההשפעה שלו בבית, בזוגיות ובארגון.",
+    whatIsDifferentTitle: "מה שונה מהרצאות אחרות?",
+    whatIsDifferentBody:
+      "זו לא הרצאה על 'איך לדבר נכון', אלא על איך להבין בני אדם לעומק ולפעול לא מתוך אינטואיציה, אלא מתוך מיומנות.",
+    howDeliveredTitle: "איך ההרצאה מועברת בפועל?",
+    howDeliveredBody:
+      "ההרצאה מועברת דרך סיפור חיים אישי, עם רגעים מצחיקים ומרגשים, שמחברים את התוכן לחיים עצמם והופכים אותו לחוויה שקל להתחבר אליה וליישם.",
+    notAManagerTitle: "מה אם אני לא מנהל? זה מתאים גם למי שלא מנהל אנשים?",
+    notAManagerBody: "כן. כל אחד משפיע בזוגיות, במשפחה, ואת הסובבים אותו.",
+    lectureDurationTitle: "כמה זמן ההרצאה?",
+    lectureDurationBody: "כשעה עם זמן לשאלות.",
+    customizationTitle: "אפשר להתאים את ההרצאה לארגון/צוות?",
+    customizationBody: "כן. התוכן מותאם למציאות ולצרכים של הארגון.",
+    howToBookTitle: "איך מזמינים את ההרצאה לארגון?",
+    howToBookBody: "שולחים הודעה/אימייל ונקבע שיחה טלפונית.",
   },
   accessibility: {
     heroImageAlt: "יניב מאיר בוחבוט",

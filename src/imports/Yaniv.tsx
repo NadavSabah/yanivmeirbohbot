@@ -1,5 +1,6 @@
 import svgPaths from "./svg-16itobd6e1";
 import { imgImage769, imgImage768 } from "./svg-sgxb4";
+import { InfoSection } from "../app/components/InfoSection";
 import { texts } from "../constants/texts";
 // Placeholder for local run (figma:asset only works in Figma)
 const imgImage770 =
@@ -80,8 +81,8 @@ function Frame2() {
   return (
     <div className="absolute content-stretch flex gap-[12px] items-start justify-end left-[32px] top-[1278px]">
       <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
-        <span className="leading-[24px]">{texts.content.maxResultMinFrictionTitle}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionTitleEmphasis}</span>{texts.content.maxResultMinFrictionTitleSuffix}</span>
-        <span className="leading-[24px]">{texts.content.maxResultMinFrictionBody}<span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold">{texts.content.maxResultMinFrictionBodyEmphasis}</span></span>
+        <span className="leading-[24px]">{texts.content.maxResultMinFrictionTitle}</span>
+        <span className="leading-[24px]">{texts.content.maxResultMinFrictionBody}</span>
       </p>
       <div className="relative shrink-0 size-[20px]" data-name="Small - Birth">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[20px] top-1/2" data-name="Normal - Birth">
@@ -197,33 +198,13 @@ export default function Yaniv() {
           {texts.content.heroDescription}
         </p>
       </div>
-      <p className="-translate-x-full absolute font-['SF_Pro_Display:Bold',sans-serif] leading-[28px] left-[361px] not-italic text-[#333] text-[20px] text-right top-[571px] tracking-[0.3px] w-[323px]" dir="auto">
+      <p className="whitespace-pre-line -translate-x-full absolute font-['SF_Pro_Display:Bold',sans-serif] leading-[28px] left-[361px] not-italic text-[#333] text-[20px] text-right top-[571px] tracking-[0.3px] w-[323px]" dir="auto">
         {texts.content.distanceTitle}
       </p>
       <div className="-translate-x-full absolute font-['SeoulNamsan_CM:Regular',sans-serif] leading-[0] left-[360px] not-italic text-[16px] text-black text-right top-[644px] tracking-[0.3px] w-[328px] whitespace-pre-wrap">
         <p className="mb-0" dir="auto">
           <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.distanceIntro}
-          </span>
-          <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.distanceExample}
-            <br aria-hidden="true" />
-            <br aria-hidden="true" />
-          </span>
-        </p>
-        <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.introNiceToMeet}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-            {texts.content.introName}
-          </span>
-          <span className="font-['SF_Pro_Display:Medium',sans-serif] leading-[24px]">
-            {texts.content.introBioLine1}
-            <br />
-            {texts.content.introBioLine2}
-            <br />
-            {texts.content.introBioLine3}
+            {texts.content.introParagraph}
           </span>
         </p>
         <p className="leading-[24px] mb-0" dir="auto">
@@ -257,47 +238,18 @@ export default function Yaniv() {
       <p className="-translate-x-1/2 absolute font-['Corsiva_Hebrew:Regular',sans-serif] italic leading-[34px] left-1/2 text-[36px] text-center text-shadow-[0px_2px_8px_rgba(0,0,0,0.05)] text-white top-[1424px] tracking-[0.3px] w-[323px]" dir="auto">
         {texts.content.influenceQuote}
       </p>
-      <div className="-translate-x-full absolute font-['SF_Pro_Display:Regular',sans-serif] leading-[0] left-[361px] not-italic text-[16px] text-black text-right top-[1623px] tracking-[0.3px] w-[329px] whitespace-pre-wrap">
-        <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-            {texts.content.whyImportantTitle}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">
-            <br aria-hidden="true" />
-            {texts.content.whyImportantLead}
-          </span>
-          <span className="leading-[24px]">
-            {texts.content.whyImportantKeyLead}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
-            {texts.content.whyImportantKeyBold1}
-          </span>
-          <span className="leading-[24px]">
-            {texts.content.whyImportantKeyMid}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
-            {texts.content.whyImportantKeyBold2}
-          </span>
-          <span className="leading-[24px]">
-            <br aria-hidden="true" />
-            <br aria-hidden="true" />
-          </span>
-        </p>
-        <p className="mb-0" dir="auto">
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px] not-italic">
-            {texts.content.whoIsItForTitle}
-            <br aria-hidden="true" />
-          </span>
-          <span className="leading-[24px]">
-            {texts.content.whoIsItForDescriptionLead}
-          </span>
-          <span className="font-['SF_Pro_Display:Bold',sans-serif] font-bold leading-[24px]">
-            {texts.content.whoIsItForDescriptionBold}
-          </span>
-          <span className="leading-[24px]">
-            {texts.content.whoIsItForDescriptionSuffix}
-          </span>
-        </p>
+      <div
+        className="-translate-x-full absolute font-['SF_Pro_Display:Regular',sans-serif] leading-[0] left-[361px] not-italic text-[16px] text-black text-right top-[1623px] tracking-[0.3px] w-[329px] whitespace-pre-wrap"
+        dir="rtl"
+      >
+        <InfoSection title={texts.content.whyImportantTitle} body={texts.content.whyImportantBody} />
+        <InfoSection title={texts.content.whoIsItForTitle} body={texts.content.whoIsItForBody} />
+        <InfoSection title={texts.content.whatIsDifferentTitle} body={texts.content.whatIsDifferentBody} />
+        <InfoSection title={texts.content.howDeliveredTitle} body={texts.content.howDeliveredBody} />
+        <InfoSection title={texts.content.notAManagerTitle} body={texts.content.notAManagerBody} />
+        <InfoSection title={texts.content.lectureDurationTitle} body={texts.content.lectureDurationBody} />
+        <InfoSection title={texts.content.customizationTitle} body={texts.content.customizationBody} />
+        <InfoSection title={texts.content.howToBookTitle} body={texts.content.howToBookBody} />
       </div>
       <Frame5 />
       <Frame4 />
