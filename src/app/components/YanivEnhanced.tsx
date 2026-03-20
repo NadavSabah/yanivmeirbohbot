@@ -76,10 +76,10 @@ export default function YanivEnhanced() {
         <div className="w-full max-w-screen-xl mx-auto px-6 lg:px-20 relative h-full z-10 box-border">
           <div className="pt-[220px] lg:pt-[130px] flex flex-col items-center lg:items-end">
             <div className="w-full max-w-full lg:max-w-[700px] text-center lg:text-right text-white lg:ml-auto lg:mr-0 2xl:mr-[5%] lg:-mt-[10px] lg:bg-black/20 lg:backdrop-blur-lg lg:p-12 lg:rounded-3xl lg:border lg:border-white/10">
-              <p className="font-['SF_Pro_Display:Heavy',sans-serif] font-bold leading-[32px] text-[32px] lg:text-8xl lg:leading-[1.1] tracking-[0.3px] lg:tracking-tighter mb-0 [text-shadow:0_1px_2px_rgba(0,0,0,0.2),0_0_1px_rgba(0,0,0,0.15)] text-center lg:text-right" dir="auto">
+              <p className="font-['SF_Pro_Display:Heavy',sans-serif] font-bold leading-[32px] text-[30px] lg:text-8xl lg:leading-[1.1] tracking-[0.3px] lg:tracking-tighter mb-0 [text-shadow:0_1px_2px_rgba(0,0,0,0.2),0_0_1px_rgba(0,0,0,0.15)] text-center lg:text-right" dir="auto">
                 {texts.content.heroHeadline}
               </p>
-              <p className="font-['SF_Pro_Display:Thin',sans-serif] leading-[32px] text-[27px] lg:text-5xl lg:leading-[56px] text-center lg:text-right" dir="auto">
+              <p className="font-['SF_Pro_Display:Thin',sans-serif] leading-[32px] text-[30px] lg:text-5xl lg:leading-[56px] text-center lg:text-right" dir="auto">
                 {texts.content.heroSubheadline}
               </p>
               <p className="mt-2 font-['SF_Pro_Display:Medium',sans-serif] leading-[24px] text-[16px] lg:leading-[28px] lg:text-[18px] tracking-[0.3px] text-center lg:text-right" dir="auto">
