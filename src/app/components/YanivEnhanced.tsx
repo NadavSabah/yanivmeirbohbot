@@ -8,6 +8,7 @@ const imgImage770 = heroImage;
 import { PrimaryCTAButton, WhatsAppButton } from "./CTAButtons";
 import { InfoSection } from "./InfoSection";
 import { texts } from "../../constants/texts";
+import YanivQ from "./YanivQ";
 
 function Frame4() {
   return (
@@ -56,11 +57,8 @@ function BulletTextRow({ children, className }: { children: ReactNode; className
   );
 }
 
-export default function YanivEnhanced() {
+function HeroSection() {
   return (
-    <div className="relative w-full min-h-0 overflow-x-hidden text-center lg:text-right" data-name="Yaniv">
-      <div className="flex flex-col w-full box-border">
-      {/* Hero at top: relative container, image first in DOM, content overlays via absolute */}
       <div id="hero-section" className="relative w-full h-[500px] lg:h-[850px] shrink-0 overflow-hidden bg-[#121d2a]">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" data-name="PHOTO-2026-03-06-09-36-20 1">
           <div className="absolute inset-0 max-w-screen-2xl mx-auto relative h-full">
@@ -73,9 +71,9 @@ export default function YanivEnhanced() {
           <div className="absolute top-0 right-0 h-full w-[40%] bg-[#121d2a] blur-[120px] lg:block hidden translate-x-[20%]" />
           <div className="hidden lg:block absolute inset-0 opacity-100 bg-[radial-gradient(circle_at_25%_40%,_transparent_10%,_#121d2a_75%,_#121d2a_100%)]" />
         </div>
-        <div className="w-full max-w-screen-xl mx-auto px-6 lg:px-20 relative h-full z-10 box-border">
-          <div className="pt-[220px] lg:pt-[130px] flex flex-col items-center lg:items-end">
-            <div className="w-full max-w-full lg:max-w-[700px] text-center lg:text-right text-white lg:ml-auto lg:mr-0 2xl:mr-[5%] lg:-mt-[10px] lg:bg-black/20 lg:backdrop-blur-lg lg:p-12 lg:rounded-3xl lg:border lg:border-white/10">
+        <div className="relative z-10 h-full w-full max-w-screen-xl mx-auto px-6 lg:px-20 box-border">
+          <div className="flex h-full flex-col justify-end items-center lg:items-end pb-[30px]">
+            <div className="w-full max-w-full lg:max-w-[700px] text-center lg:text-right text-white lg:ml-auto 2xl:mr-[5%] lg:-mt-[10px] lg:bg-black/20 lg:backdrop-blur-lg lg:p-12 lg:rounded-3xl lg:border lg:border-white/10">
               <p className="font-['SF_Pro_Display:Heavy',sans-serif] font-bold leading-[32px] text-[30px] lg:text-8xl lg:leading-[1.1] tracking-[0.3px] lg:tracking-tighter mb-0 [text-shadow:0_1px_2px_rgba(0,0,0,0.2),0_0_1px_rgba(0,0,0,0.15)] text-center lg:text-right" dir="auto">
                 {texts.content.heroHeadline}
               </p>
@@ -92,6 +90,15 @@ export default function YanivEnhanced() {
           </div>
         </div>
       </div>
+    );
+  }
+
+export default function YanivEnhanced() {
+  return (
+    <div className="relative w-full min-h-0 overflow-x-hidden text-center lg:text-right" data-name="Yaniv">
+      <div className="flex flex-col w-full box-border">
+      {/* Hero at top: relative container, image first in DOM, content overlays via absolute */}
+      <HeroSection />
       {/* Distance + intro block: RTL stacked flow */}
       <div className="mt-[30px] flex flex-col w-full box-border lg:max-w-screen-xl mx-auto px-6 lg:px-20">
         <div className="flex flex-col items-start lg:items-start lg:py-24" dir="rtl">
@@ -103,7 +110,7 @@ export default function YanivEnhanced() {
           </p>
 
           <div
-            className="font-['SeoulNamsan_CM:Regular',sans-serif] leading-[0] not-italic text-[16px] lg:text-[18px] text-black text-right tracking-[0.3px] w-full max-w-full lg:max-w-[850px] whitespace-pre-wrap mb-6 overflow-x-hidden"
+            className="font-['SeoulNamsan_CM:Regular',sans-serif] leading-[0] not-italic text-[16px] lg:text-[18px] text-black text-right tracking-[0.3px] w-full max-w-full lg:max-w-[850px] whitespace-pre-wrap overflow-x-hidden"
             dir="rtl"
           >
             <p className="mb-0">
@@ -149,22 +156,13 @@ export default function YanivEnhanced() {
 
    
       </div>
-      {/* Gradient sections in document flow for natural scroll */}
-      <div className="relative flex flex-col items-center justify-center w-full mb-10 lg:mt-24 min-w-0 py-16 px-6 lg:px-20 lg:py-60 lg:items-center lg:text-center lg:bg-fixed lg:[--quote-bg-attachment:fixed]"
-       style={{
-         backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 393 173\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0.05 19.039 -43.25 0.090324 196.5 86.5)\\'><stop stop-color=\\'rgba(0,0,0,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(10,10,10,1)\\' offset=\\'0.0625\\'/><stop stop-color=\\'rgba(19,19,19,1)\\' offset=\\'0.125\\'/><stop stop-color=\\'rgba(38,38,38,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(57,57,57,1)\\' offset=\\'0.375\\'/><stop stop-color=\\'rgba(77,77,77,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(115,115,115,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(153,153,153,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')",
-         backgroundRepeat: "no-repeat",
-         backgroundPosition: "center",
-         backgroundSize: "cover",
-         backgroundAttachment: "var(--quote-bg-attachment, scroll)",
-       }}>
-        <div className="pointer-events-none absolute inset-0 hidden lg:block bg-gradient-to-l from-black/50 to-transparent" />
-        <div className="w-full max-w-screen-xl mx-auto box-border lg:flex lg:justify-center">
-          <p className="font-['Corsiva_Hebrew:Regular',sans-serif] italic leading-[38px] text-[30px] lg:text-[48px] lg:leading-[1.3] text-center lg:text-center text-shadow-[0px_2px_8px_rgba(0,0,0,0.05)] text-white tracking-[0.3px] w-full max-w-full lg:max-w-[700px] lg:mx-auto [text-wrap:pretty]">{texts.content.influenceQuote}
-          </p>
+      {/* Quote section */}
+      {/* <div className="relative flex flex-col items-center justify-center w-full mb-10 lg:mt-24 min-w-0 py-16 lg:py-60 lg:items-center lg:text-center"> */}
+        <div className="w-full mb-12 mt-12">
+          <YanivQ />
         </div>
-      </div>
-      <div className="w-full max-w-screen-xl mx-auto px-6 lg:px-20 box-border lg:mt-20">
+      {/* </div> */}
+      <div className="w-full max-w-screen-xl mx-auto px-6 lg:px-20 box-border">
         <div
           className="flex flex-col items-start gap-4 lg:gap-6 w-full max-w-full lg:max-w-[850px] text-right"
           dir="rtl"
