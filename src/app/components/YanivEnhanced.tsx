@@ -64,7 +64,7 @@ function HeroSection() {
           <div className="absolute inset-0 max-w-screen-2xl mx-auto relative h-full">
             <img
               alt={texts.accessibility.heroImageAlt}
-              className="absolute inset-0 w-full h-full object-cover object-[50%_30%] lg:object-contain lg:object-left lg:scale-105 transition-transform duration-1000"
+              className="absolute inset-0 w-full h-full object-cover object-[calc(50%+15px)_30%] lg:object-contain lg:object-[15px_center] lg:scale-105 transition-transform duration-1000"
               src={heroImage}
             />
           </div>
