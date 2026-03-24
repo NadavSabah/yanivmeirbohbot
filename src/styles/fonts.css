@@ -1,5 +1,25 @@
+/* Local font files (.woff2, etc.): place them in src/assets/fonts/ and reference from here with:
+   src: url("../assets/fonts/YourFont.woff2") format("woff2");
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: Karantina;
+  src: url("../assets/fonts/Karantina/Karantina-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Karantina;
+  src: url("../assets/fonts/Karantina/Karantina-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* SF Pro Display alternatives using system fonts */
 @font-face {

@@ -74,15 +74,17 @@ function HeroSection() {
         <div className="relative z-10 h-full w-full max-w-screen-xl mx-auto px-6 lg:px-20 box-border">
           <div className="flex h-full flex-col justify-end items-center lg:items-end pb-[30px]">
             <div className="w-full max-w-full lg:max-w-[700px] text-center lg:text-right text-white lg:ml-auto 2xl:mr-[5%] lg:-mt-[10px] lg:bg-black/20 lg:backdrop-blur-lg lg:p-12 lg:rounded-3xl lg:border lg:border-white/10">
-              <p className="font-['SF_Pro_Display:Heavy',sans-serif] font-bold leading-[32px] text-[30px] lg:text-8xl lg:leading-[1.1] tracking-[0.3px] lg:tracking-tighter mb-0 [text-shadow:0_1px_2px_rgba(0,0,0,0.2),0_0_1px_rgba(0,0,0,0.15)] text-center lg:text-right" dir="auto">
-                {texts.content.heroHeadline}
-              </p>
-              <p className="font-['SF_Pro_Display:Thin',sans-serif] leading-[32px] text-[30px] lg:text-5xl lg:leading-[56px] text-center lg:text-right" dir="auto">
-                {texts.content.heroSubheadline}
-              </p>
-              <p className="mt-2 font-['SF_Pro_Display:Medium',sans-serif] leading-[24px] text-[16px] lg:leading-[28px] lg:text-[18px] tracking-[0.3px] text-center lg:text-right" dir="auto">
+              <div className="hero-headlines flex flex-col gap-0 text-[50px] lg:text-[64px] leading-[45px] tracking-[2px]">
+                <p className="font-['Karantina',sans-serif] font-normal lg:text-[112px] lg:leading-[1.1] mb-0 [text-shadow:0_1px_2px_rgba(0,0,0,0.2),0_0_1px_rgba(0,0,0,0.15)] text-center lg:text-right" dir="auto">
+                  {texts.content.heroHeadline}
+                </p>
+                <p className="font-['Karantina',sans-serif] font-light text-center lg:text-right" dir="auto">
+                  {texts.content.heroSubheadline}
+                </p>
+              </div>
+              {/* <p className="mt-2 font-['SF_Pro_Display:Medium',sans-serif] leading-[24px] text-[16px] lg:leading-[28px] lg:text-[18px] tracking-[0.3px] text-center lg:text-right" dir="auto">
                 {texts.content.heroDescription}
-              </p>
+              </p> */}
               <div className="mt-6 w-full flex justify-center lg:justify-start lg:w-fit lg:ml-0">
                 <PrimaryCTAButton position="static" className="lg:hover:scale-105 transition-transform duration-300" />
               </div>

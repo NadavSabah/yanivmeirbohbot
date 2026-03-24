@@ -20,7 +20,7 @@ export default function YanivQ() {
         aria-hidden="true"
       >
         <div 
-          className="h-[140px] w-[280px] rounded-full bg-[#0086E3]/30 blur-[60px] md:h-[180px] md:w-[450px] md:blur-[90px]" 
+          className="h-[140px] w-[280px] rounded-full bg-[#0086E3]/14 blur-[60px] md:h-[180px] md:w-[450px] md:blur-[90px]" 
         />
       </div>
 
@@ -37,12 +37,8 @@ export default function YanivQ() {
 
           {/* THE QUOTE TEXT */}
           <p
-            className="relative z-10 text-right text-[26px] font-medium leading-[1.3] text-black md:text-[36px] lg:text-[44px]"
+            className="relative z-10 text-right font-['Karantina',sans-serif] font-normal text-[40px] leading-[36px] text-[#353E43]"
             dir="auto"
-            style={{
-              fontFamily: "var(--font-quote, 'Heebo', sans-serif)",
-              textShadow: "0px 2px 10px rgba(0,0,0,0.04)",
-            }}
           >
             {texts.content.influenceQuote}
           </p>
