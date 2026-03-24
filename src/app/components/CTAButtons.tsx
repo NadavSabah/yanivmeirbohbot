@@ -1,8 +1,8 @@
 import React from "react";
 import { texts } from "../../constants/texts";
 
-// const WHATSAPP_NUMBER = "972508803015";
-const WHATSAPP_NUMBER = "972523831348";
+const WHATSAPP_NUMBER = "972508803015";
+;
 
 /** Open WhatsApp with optional prefilled message. */
 export function openWhatsApp(message?: string) {

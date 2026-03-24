@@ -1,15 +1,11 @@
 export const texts = {
   cta: {
-    heroPrimary:"הזמנת הרצאה לארגון שלי",
+    heroPrimary: "הזמנת הרצאה לארגון שלי",
     heroWhatsAppMessage: "שלום, אני מעוניין/ת לשמוע פרטים נוספים על ההרצאה",
     footerWhatsAppMessage: "שלום, אני מעוניין/ת להזמין הרצאה לארגון",
     stickyHeaderLabel: "Ready to take the next step?",
-    getStarted: "Get Started Now",
   },
   content: {
-    transitionFromIntuitionToMethodTitle: "המעבר מאינטואיציה לשיטה:", 
-    
-    transitionFromIntuitionToMethodBody: " להפסיק לנחש ולהתחיל להשתמש בכלים פסיכולוגיים ומנטליים מוכחים.",
     maxResultMinFrictionTitle: "איך מזהים את הרצון האמיתי שמאחורי ההתנהגות?",
     maxResultMinFrictionBody: "מה הדבר האחד שחייבים לגלות כדי לייצר השפעה?",
     maxResultMinFrictionBullet3:
@@ -20,7 +16,8 @@ export const texts = {
     inviteLectureBody: "אני מזמין אתכם לחוויה אישית שתתן לכם כלים מעשיים להנעה מתוך חופש בחירה.",
     heroHeadline: "להשפיע כדרך חיים.",
     heroSubheadline: "הופכים את יכולת ההשפעה מאינטואיציה למיומנות.",
-    heroDescription:"הרצאה של יניב מאיר בוחבוט שמגלה גישה ייחודית למקסום יכולת ההנעה שלכם בעבודה, בבית ובחיים.",
+    heroDescription:
+      "הרצאה של יניב מאיר בוחבוט שמגלה גישה ייחודית למקסום יכולת ההנעה שלכם בעבודה, בבית ובחיים.",
     distanceTitle:
       "מה המשותף לעובד חסר מוטיבציה, ילד שמסרב לצחצח שיניים וחייל אפריקאי שמטיס כטב\"ם?",
     introParagraph:
@@ -33,7 +30,6 @@ export const texts = {
     afterYearsBody2Bold: "אנחנו נתקלים בהתנגדות.",
     afterYearsBody3:
       "הרגעים שבהם מישהו נסגר, מתווכח, מתעלם או סתם לא זז יכולים להיות מאוד מתסכלים.",
-    afterYearsBody4: "בדיוק שם רוב האנשים מתרחקים, מתעצבנים או מפעילים כוח.",
     whatMakesProfessionalQuestion:
       "בהרצאה אני מציג גישה אחרת שהופכת את פעולת ההנעה לחוויה טובה ומסקרנת.",
     influenceQuote:
@@ -66,6 +62,4 @@ export const texts = {
   contact: {
     email: "YanivMeir.b@gmail.com",
   },
-  // Add more keys here as you find them in the codebase
 } as const;
-

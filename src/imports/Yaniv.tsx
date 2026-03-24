@@ -2,6 +2,15 @@ import svgPaths from "./svg-16itobd6e1";
 import { imgImage769, imgImage768 } from "./svg-sgxb4";
 import { InfoSection } from "../app/components/InfoSection";
 import { texts } from "../constants/texts";
+
+/** Figma export only — not mounted in App; copy kept local so `texts` stays minimal. */
+const FIGMA_TRANSITION_TITLE = "המעבר מאינטואיציה לשיטה:";
+const FIGMA_TRANSITION_BODY =
+  " להפסיק לנחש ולהתחיל להשתמש בכלים פסיכולוגיים ומנטליים מוכחים.";
+const FIGMA_VERSATILE_LEADERSHIP_TITLE = "מנהיגות רב־תכליתית:";
+const FIGMA_VERSATILE_LEADERSHIP_BODY =
+  "שילוב גישות מנהיגות מותאם למצב ולצרכי הצוות.";
+
 // Placeholder for local run (figma:asset only works in Figma)
 const imgImage770 =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
@@ -41,8 +50,8 @@ function Frame() {
   return (
     <div className="absolute content-stretch flex gap-[12px] items-start justify-end left-[32px] top-[1110px]">
       <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">{texts.content.transitionFromIntuitionToMethodTitle}</span>
-        <span className="leading-[24px]">{texts.content.transitionFromIntuitionToMethodBody}</span>
+        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">{FIGMA_TRANSITION_TITLE}</span>
+        <span className="leading-[24px]">{FIGMA_TRANSITION_BODY}</span>
       </p>
       <div className="relative shrink-0 size-[20px]" data-name="Small - Birth">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[20px] top-1/2" data-name="Normal - Birth">
@@ -61,8 +70,8 @@ function Frame1() {
   return (
     <div className="absolute content-stretch flex gap-[12px] items-start justify-end left-[32px] top-[1194px]">
       <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[0.3px] w-[296px]" dir="auto">
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">{texts.content.versatileLeadershipTitle}</span>
-        <span className="leading-[24px]">{texts.content.versatileLeadershipBody}</span>
+        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[24px]">{FIGMA_VERSATILE_LEADERSHIP_TITLE}</span>
+        <span className="leading-[24px]">{FIGMA_VERSATILE_LEADERSHIP_BODY}</span>
       </p>
       <div className="relative shrink-0 size-[20px]" data-name="Small - Birth">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[20px] top-1/2" data-name="Normal - Birth">
