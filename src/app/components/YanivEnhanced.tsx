@@ -205,7 +205,7 @@ export default function YanivEnhanced() {
         />
         <div className="relative z-10 w-full max-w-screen-xl mx-auto box-border flex flex-col items-center justify-center gap-6 lg:justify-between" dir="rtl">
           <div className="flex-1 flex flex-col items-center lg:items-center gap-4">
-            <p className="font-['Karantina',sans-serif] font-normal leading-[36px] not-italic shrink-0 text-[40px] lg:text-[32px] text-center text-white tracking-[0.3px] w-full max-w-full lg:max-w-[560px]">
+            <p className="font-['Karantina',sans-serif] font-normal leading-[36px] not-italic shrink-0 text-[40px] lg:text-[50px] text-center text-white tracking-[0.3px] w-full max-w-full lg:max-w-[560px]">
               {texts.content.inviteLectureTitle}
             </p>
             <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[24px] not-italic shrink-0 text-[16px] lg:text-[20px] text-center text-white tracking-[0.3px] w-full max-w-full lg:max-w-[560px]">
