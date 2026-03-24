@@ -31,7 +31,7 @@ export default function YanivQ() {
         <div className="relative mx-auto max-w-4xl px-8 py-9 md:py-24">
           
           {/* THE QUOTE ICON: Positioned specifically for the Hebrew start-point */}
-          <div className="absolute right-0 top-3 rotate-180 text-[#0086E3] opacity-20 md:right-10 md:top-10">
+          <div className="absolute right-0 top-0 rotate-180 text-[#0086E3] opacity-20 md:right-10 md:top-10">
             <QuoteMarkGraphic className="size-16 lg:size-24 rotate-180" />
           </div>
 
